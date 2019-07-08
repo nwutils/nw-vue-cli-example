@@ -1,0 +1,113 @@
+{
+  "name": "nw-vue",
+  "version": "1.0.0",
+  "main": "http://localhost:8964",
+  "node-remote": "http://localhost:8964",
+  "node-main": "",
+  "window": {
+    "width": 960,
+    "height": 600,
+    "min_width": 700,
+    "min_height": 500,
+    "icon": "src/assets/vue.png"
+  },
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run serve\" \"nw .\"",
+    "serve": "vue-cli-service serve --port=8964",
+    "build": "npm run build:clean && npm run build:vue && npm run build:nw",
+    "build:clean": "rimraf ./dist-vue ./dist",
+    "build:vue": "vue-cli-service build --modern --dest ./dist-vue",
+    "build:nw": "build --concurrent --tasks win-x86 --mirror https://dl.nwjs.io/ .",
+    "build:nw2": "build --concurrent --tasks win-x86,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ .",
+    "run:win": "dist\\nw-vue-1.0.0-win-x86\\nw-vue.exe",
+    "lint": "vue-cli-service lint --no-fix",
+    "fix": "vue-cli-service lint --fix",
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.9.0",
+    "@vue/cli-plugin-e2e-nightwatch": "^3.9.0",
+    "@vue/cli-plugin-eslint": "^3.9.0",
+    "@vue/cli-plugin-unit-jest": "^3.9.0",
+    "@vue/cli-service": "^3.9.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "concurrently": "^4.1.1",
+    "core-js": "^2.6.5",
+    "eslint": "^5.16.0",
+    "eslint-plugin-jest": "^22.7.2",
+    "eslint-plugin-vue": "^5.0.0",
+    "nw": "0.39.2-sdk",
+    "nw-vue-devtools": "^1.3.0",
+    "nwjs-builder-phoenix": "^1.15.0",
+    "nwjs-types": "^1.0.0",
+    "rimraf": "^2.6.3",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "chromium-args": "--load-extension='./node_modules/nw-vue-devtools/extension'",
+  "build": {
+    "nwVersion": "v0.39.2",
+    "nwFlavor": "normal",
+    "targets": [
+      "zip",
+      "nsis7z"
+    ],
+    "files": [
+      "**/*"
+    ],
+    "excludes": [
+      "e2e/**/*",
+      "src/**/*",
+      "tests/**/*",
+      "public/**/*"
+      ".browserslistrc",
+      ".eslintrc",
+      ".gitignore",
+      ".editorconfig",
+      "babel.config.js",
+      "cypress.json",
+      "jest.config.js",
+      "nightwatch.conf.js",
+      "nightwatch.json",
+      "package-lock.json",
+      "screenshot.png",
+      "selenium-debug.log",
+      "postcss.config.js",
+      "vue.config.js"
+    ],
+    "strippedProperties": [
+      "chromium-args",
+      "scripts",
+      "devDependencies",
+      "build"
+    ],
+    "overriddenProperties": {
+      "main": "http://localhost:8965",
+      "node-remote": "http://localhost:8965",
+      "node-main": "server.js"
+    },
+    "win": {
+      "icon": "public/icon.ico"
+    },
+    "mac": {
+      "icon": "public/icon.icns"
+    },
+    "nsis": {
+      "icon": "public/icon.ico",
+      "unIcon": "public/icon.ico",
+      "languages": [
+        "English"
+      ],
+      "diffUpdaters": false,
+      "hashCalculation": true
+    }
+  }
+}
