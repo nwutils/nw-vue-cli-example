@@ -30,7 +30,7 @@ NW.js + Vue-CLI 3 example
 
 # **IMPORTANT NOTE ABOUT BUILDS!!!**
 
-They take a long time. If you do `npm run build` expect it to take 10-15 minutes. This can be adjusted by changing the build params in the `package.json`. The more platforms and build types, the longer it takes.
+They take a long time. If you do `npm run build` expect it to take 10-30 minutes (depending on amount of dependencies in the dist and your CPU/internet). This can be adjusted by changing the build params in the `package.json`. The more platforms and build types, the longer it takes.
 
 
 ## Automated quality enforcment
