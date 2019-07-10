@@ -16,7 +16,6 @@ module.exports = {
     Vue: true,
     Vuex: true,
     VueRouter: true,
-    httpVueLoader: true,
     store: true,
     router: true
   },
