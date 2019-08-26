@@ -46,3 +46,10 @@ They take a long time. If you do `npm run build` expect it to take 10-30 minutes
 Want Vue-Router? Vuex? Use the Vue-CLI to add them:
 
 * [Vue-CLI documentation](https://cli.vuejs.org/config).
+
+* * *
+
+## Alternatives
+
+* [nwjs-vue](https://github.com/elegantweb/nwjs-vue) - Uses Vue-CLI 2
+* [vue-desktop-basic](https://github.com/TheJaredWilcurt/vue-desktop-basic) - Does not use a build system at all, all `.vue` files run directly in the browser context
