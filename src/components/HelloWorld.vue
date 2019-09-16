@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
-    <h1 data-test="message">{{ msg }}</h1>
+    <h1 data-test="message">
+      {{ msg }}
+    </h1>
     <h3 data-test="versions">
       You are using
       Vue.js (v{{ vueVersion }}),

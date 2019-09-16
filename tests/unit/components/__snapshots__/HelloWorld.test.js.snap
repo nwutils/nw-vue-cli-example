@@ -18,7 +18,9 @@ exports[`HelloWorld.vue Activate dev tools: show 1`] = `
 
 exports[`HelloWorld.vue Render default contents 1`] = `
 <div class="hello">
-  <h1>Welcome to your Vue Desktop App in NW.js!</h1>
+  <h1>
+    Welcome to your Vue Desktop App in NW.js!
+  </h1>
   <h3>
     You are using
     Vue.js (v2.6.10),
