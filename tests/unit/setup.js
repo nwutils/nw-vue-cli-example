@@ -26,8 +26,8 @@ global.beforeEach(() => {
       NODE_ENV: 'development'
     },
     versions: {
-      chromium: '76.0.3809.132',
-      nw: '0.40.2',
+      chromium: '77.0.3865.75',
+      nw: '0.41.1',
       'nw-flavor': 'sdk',
       node: '12.9.1'
     }

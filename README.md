@@ -47,9 +47,25 @@ Want Vue-Router? Vuex? Use the Vue-CLI to add them:
 
 * [Vue-CLI documentation](https://cli.vuejs.org/config).
 
+
 * * *
+
 
 ## Alternatives
 
 * [nwjs-vue](https://github.com/elegantweb/nwjs-vue) - Uses Vue-CLI 2
 * [vue-desktop-basic](https://github.com/TheJaredWilcurt/vue-desktop-basic) - Does not use a build system at all, all `.vue` files run directly in the browser context
+
+
+* * *
+
+
+## Maintainence of this repo
+
+This is not for those *using* this repo, but for those *maintaining* it.
+
+1. When updating the version of NW.js devDependency, also update these:
+  * `tests/unit/setup.js`
+  * `tests/unit/components/__snapshots__/HelloWorld.test.js.snap`
+  * `.browserslistrc`
+1. Run `npm run regression` after updating dependencies or other major changes to verify builds still work correctly

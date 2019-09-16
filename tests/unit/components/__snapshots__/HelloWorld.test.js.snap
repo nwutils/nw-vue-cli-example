@@ -24,10 +24,10 @@ exports[`HelloWorld.vue Render default contents 1`] = `
   <h3>
     You are using
     Vue.js (v2.6.10),
-    NW.js (v0.40.2-sdk),
+    NW.js (v0.41.1-sdk),
     Node.js (v12.9.1),
     and
-    Chromium (v76.0.3809.132).
+    Chromium (v77.0.3865.75).
   </h3>
   <button>
     Show
