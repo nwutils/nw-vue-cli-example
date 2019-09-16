@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 data-test="message">{{ msg }}</h1>
     <h3 data-test="versions">
       You are using
       Vue.js (v{{ vueVersion }}),
@@ -10,7 +10,11 @@
       Chromium (v{{ versions.chromium }}).
     </h3>
 
-    <button v-if="devMode" @click="toggleDevTools">
+    <button
+      v-if="devMode"
+      data-test="toggleDevTools"
+      @click="toggleDevTools"
+    >
       <template v-if="showDevTools">
         Show
       </template>
@@ -142,16 +146,16 @@ export default {
   methods: {
     toggleDevTools: function () {
       if (this.showDevTools) {
-        nw.Window.get().showDevTools();
+        window.nw.Window.get().showDevTools();
       } else {
-        nw.Window.get().closeDevTools();
+        window.nw.Window.get().closeDevTools();
       }
       this.showDevTools = !this.showDevTools;
     }
   },
   computed: {
     devMode: function () {
-      return process.env.NODE_ENV === 'development';
+      return window.process.env.NODE_ENV === 'development';
     },
     versions: function () {
       return window.process.versions;

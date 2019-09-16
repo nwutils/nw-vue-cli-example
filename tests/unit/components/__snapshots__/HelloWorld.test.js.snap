@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelloWorld.vue Activate dev tools: hide 1`] = `
+<button>
+  Hide
+
+  Developer Tools
+</button>
+`;
+
+exports[`HelloWorld.vue Activate dev tools: show 1`] = `
+<button>
+  Show
+
+  Developer Tools
+</button>
+`;
+
+exports[`HelloWorld.vue Render default contents 1`] = `
+<div class="hello">
+  <h1>Welcome to your Vue Desktop App in NW.js!</h1>
+  <h3>
+    You are using
+    Vue.js (v2.6.10),
+    NW.js (v0.40.2-sdk),
+    Node.js (v12.9.1),
+    and
+    Chromium (v76.0.3809.132).
+  </h3>
+  <button>
+    Show
+
+    Developer Tools
+  </button>
+  <p>You can use the resources below to find more information around building your Vue App.</p>
+  <ul>
+    <li title="github.com/nwutils/nw-vue-cli-example">
+      <a href="#">
+        nw-vue-cli-example
+      </a>
+    </li>
+    <li title="nwjs.io">
+      <a href="#">
+        NW.js
+      </a>
+    </li>
+    <li title="github.com/nwutils/nw-vue-devtools">
+      <a href="#">
+        nw-vue-devtools
+      </a>
+    </li>
+    <li title="github.com/evshiron/nwjs-builder-phoenix">
+      <a href="#">
+        nwjs-builder-phoenix
+      </a>
+    </li>
+    <li title="cli.vuejs.org">
+      <a href="#">
+        vue-cli
+      </a>
+    </li>
+  </ul>
+  <h3>Installed CLI Plugins</h3>
+  <ul>
+    <li title="github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel">
+      <a href="#">
+        babel
+      </a>
+    </li>
+    <li title="github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint">
+      <a href="#">
+        eslint
+      </a>
+    </li>
+    <li title="github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-jest">
+      <a href="#">
+        unit-jest
+      </a>
+    </li>
+    <li title="github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-e2e-cypress">
+      <a href="#">
+        e2e-cypress
+      </a>
+    </li>
+  </ul>
+  <h3>Essential Links</h3>
+  <ul>
+    <li title="vuejs.org">
+      <a href="#">
+        Core Docs
+      </a>
+    </li>
+    <li title="forum.vuejs.org">
+      <a href="#">
+        Forum
+      </a>
+    </li>
+    <li title="chat.vuejs.org">
+      <a href="#">
+        Community Chat
+      </a>
+    </li>
+    <li title="twitter.com/vuejs">
+      <a href="#">
+        Twitter
+      </a>
+    </li>
+    <li title="news.vuejs.org">
+      <a href="#">
+        News
+      </a>
+    </li>
+  </ul>
+  <h3>Ecosystem</h3>
+  <ul>
+    <li title="router.vuejs.org">
+      <a href="#">
+        vue-router
+      </a>
+    </li>
+    <li title="vuex.vuejs.org">
+      <a href="#">
+        vuex
+      </a>
+    </li>
+    <li title="github.com/vuejs/vue-devtools#vue-devtools">
+      <a href="#">
+        vue-devtools
+      </a>
+    </li>
+    <li title="vue-loader.vuejs.org">
+      <a href="#">
+        vue-loader
+      </a>
+    </li>
+    <li title="github.com/vuejs/awesome-vue">
+      <a href="#">
+        awesome-vue
+      </a>
+    </li>
+  </ul>
+</div>
+`;

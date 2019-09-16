@@ -7,6 +7,7 @@
     >
       <a
         href="#"
+        data-test="link"
         @click.prevent="open(link.url)"
       >
         {{ link.name }}
@@ -43,7 +44,7 @@ export default {
   },
   methods: {
     open: function (url) {
-      nw.Shell.openExternal(url);
+      window.nw.Shell.openExternal(url);
     }
   }
 };

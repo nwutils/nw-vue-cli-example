@@ -1,10 +1,36 @@
+process.env.VUE_CLI_BABEL_TARGET_NODE = true;
+process.env.VUE_CLI_BABEL_TRANSPILE_MODULES = true;
+
 module.exports = {
+  collectCoverageFrom: [
+    'src/**/*.{js,vue}',
+    '!src/main.js',
+    '!**/node_modules/**'
+  ],
+  coverageDirectory: '<rootDir>/tests/unit/coverage',
   moduleFileExtensions: [
     'js',
     'jsx',
     'json',
     'vue'
   ],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1'
+  },
+  setupFilesAfterEnv: [
+    '<rootDir>/tests/unit/setup.js'
+  ],
+  snapshotSerializers: [
+    '<rootDir>/tests/unit/serializer.js'
+  ],
+  testEnvironment: 'jest-environment-jsdom-global',
+  testMatch: [
+    '**/tests/unit/**/*.test.js'
+  ],
+  testPathIgnorePatterns: [
+    '<rootDir>/tests/e2e'
+  ],
+  testURL: 'http://localhost/',
   transform: {
     '^.+\\.vue$': 'vue-jest',
     '.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
@@ -13,16 +39,6 @@ module.exports = {
   transformIgnorePatterns: [
     '/node_modules/'
   ],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1'
-  },
-  snapshotSerializers: [
-    'jest-serializer-vue'
-  ],
-  testMatch: [
-    '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
-  ],
-  testURL: 'http://localhost/',
   watchPlugins: [
     'jest-watch-typeahead/filename',
     'jest-watch-typeahead/testname'

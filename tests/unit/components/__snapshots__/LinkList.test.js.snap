@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkList.vue Render default contents 1`] = `
+<ul>
+  <li title="nwjs.io">
+    <a href="#">
+      Site
+    </a>
+  </li>
+</ul>
+`;

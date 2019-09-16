@@ -3,6 +3,7 @@ node_modules
 /dist/
 /dist-vue/
 
+tests/unit/coverage/**/*
 /tests/e2e/videos/
 /tests/e2e/screenshots/
 /tests/e2e/reports/
