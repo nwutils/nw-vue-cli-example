@@ -10,7 +10,7 @@ NW.js + Vue-CLI 3 example
 * Vue-DevTools
 * Babel
 * ESLint
-* Jest
+* Jest (100% test coverage)
 
 
 ## Running Locally for development
