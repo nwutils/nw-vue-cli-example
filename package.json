@@ -1,6 +1,6 @@
 {
   "name": "nw-vue",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "http://localhost:8964",
   "node-remote": "http://localhost:8964",
   "node-main": "",
