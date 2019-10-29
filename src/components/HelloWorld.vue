@@ -37,17 +37,23 @@
 
     <h3>Ecosystem</h3>
     <LinkList :links="ecosystemLinks" />
+
+    <hr />
+
+    <FsExample />
   </div>
 </template>
 
 <script>
 import Vue from 'vue';
 
+import FsExample from '@/components/FsExample.vue';
 import LinkList from '@/components/LinkList.vue';
 
 export default {
   name: 'HelloWorld',
   components: {
+    FsExample,
     LinkList
   },
   props: {
@@ -157,7 +163,7 @@ export default {
   },
   computed: {
     devMode: function () {
-      return window.process.env.NODE_ENV === 'development';
+      return window.process.versions['nw-flavor'] === 'sdk';
     },
     versions: function () {
       return window.process.versions;
