@@ -33,6 +33,15 @@ global.beforeEach(() => {
     }
   };
   window.nw = {
+    require: jest.fn((module) => {
+      if (module === 'fs') {
+        return {
+          readdirSync: jest.fn(() => {
+            return ['example-file-1.ext', 'example-file-2.ext'];
+          })
+        };
+      }
+    }),
     Shell: {
       openExternal: jest.fn()
     },

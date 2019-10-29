@@ -141,5 +141,13 @@ exports[`HelloWorld.vue Render default contents 1`] = `
       </a>
     </li>
   </ul>
+  <hr>
+  <div>
+    <!---->
+    <button>
+      Click for File System example
+    </button>
+    <!---->
+  </div>
 </div>
 `;

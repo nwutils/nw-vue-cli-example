@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FsExample.vue Click button 1`] = `
+<div>
+  <!---->
+  <button>
+    Click for File System example
+  </button>
+  <p>
+    The contents of the current working directory:
+  </p>
+  <div class="contents">
+    <div class="file">
+      example-file-1.ext
+    </div>
+    <div class="file">
+      example-file-2.ext
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FsExample.vue Error state 1`] = `
+<div>
+  <div>
+    There was an error attempting to read from the file system.
+  </div>
+  <button>
+    Try again for File System example
+  </button>
+  <!---->
+</div>
+`;
+
+exports[`FsExample.vue Render default contents 1`] = `
+<div>
+  <!---->
+  <button>
+    Click for File System example
+  </button>
+  <!---->
+</div>
+`;
