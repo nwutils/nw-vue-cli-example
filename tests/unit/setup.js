@@ -26,13 +26,22 @@ global.beforeEach(() => {
       NODE_ENV: 'development'
     },
     versions: {
-      chromium: '77.0.3865.75',
-      nw: '0.41.1',
+      chromium: '78.0.3904.70',
+      nw: '0.42.0',
       'nw-flavor': 'sdk',
-      node: '12.9.1'
+      node: '12.12.0'
     }
   };
   window.nw = {
+    require: jest.fn((module) => {
+      if (module === 'fs') {
+        return {
+          readdirSync: jest.fn(() => {
+            return ['example-file-1.ext', 'example-file-2.ext'];
+          })
+        };
+      }
+    }),
     Shell: {
       openExternal: jest.fn()
     },
