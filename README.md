@@ -8,11 +8,15 @@ NW.js + Vue-CLI 4 example
 
 * NW.js
 * Vue-CLI 4
-* Vue 2
+* Vue 2.6
 * Vue-DevTools (latest)
 * Babel
 * ESLint
 * Jest (100% test coverage)
+
+*Why not include Vue-Router or Vuex?*
+
+Those are both very easily added from the Vue-CLI. There is also no custom styling libraries (Bulma, Bootstrap, etc), or meta-languages (Sass, TS, Pug, etc), or component libraries (Vuetify, Inkline, etc). This is repo is meant to be the "go to" option for building all desktop apps with Vue. So it avoids pushing any particular choices on to you. With the exception of testing being set up for Jest, and Linting being set up to ensure minumum quality of this boilerplate repo itself. Both of which can be easily modified, ignored, or removed.
 
 
 ## Running Locally for development
@@ -33,7 +37,7 @@ NW.js + Vue-CLI 4 example
 
 # **IMPORTANT NOTE ABOUT BUILDS!!!**
 
-They take a long time. If you do `npm run build` expect it to take 10-30 minutes (depending on amount of dependencies in the dist and your CPU/internet). This can be adjusted by changing the build params in the `package.json`. The more platforms and build types, the longer it takes.
+They take a long time. If you do `npm run build` expect it to take 10-30 minutes. This can be adjusted by changing the build params in the `package.json`. The more platforms and build types, the longer it takes. You can also remove the `--concurrent` from the `build:nw` script to see a status of what has been completed. This will allow individual pieces to finish faster, but the entire build will take longer.
 
 
 ## Automated quality enforcment
@@ -48,6 +52,16 @@ They take a long time. If you do `npm run build` expect it to take 10-30 minutes
 Want Vue-Router? Vuex? Use the Vue-CLI to add them:
 
 * [Vue-CLI documentation](https://cli.vuejs.org/config).
+
+
+* * *
+
+
+## Updating Vue-DevTools
+
+To update your version of Vue-DevTools run `npm run update:vue-devtools`.
+
+This will download the source code for the latest version of Vue-DevTools and do a custom build for NW.js. This ensures you always have the latest version.
 
 
 * * *
