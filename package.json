@@ -72,7 +72,7 @@
     "vue-template-compiler": "^2.6.10",
     "wait-on": "^3.3.0"
   },
-  "chromium-args": "--load-extension='./node_modules/nw-vue-devtools/extension'",
+  "chromium-args": "--enable-spell-checking --load-extension='./node_modules/nw-vue-devtools/extension'",
   "build": {
     "nwVersion": "v0.42.0",
     "nwFlavor": "normal",
@@ -107,7 +107,6 @@
       "vue.config.js"
     ],
     "strippedProperties": [
-      "chromium-args",
       "scripts",
       "devDependencies",
       "build"
@@ -115,7 +114,8 @@
     "overriddenProperties": {
       "main": "http://localhost:8965",
       "node-remote": "http://localhost:8965",
-      "node-main": "server.js"
+      "node-main": "server.js",
+      "chromium-args": "--enable-spell-checking"
     },
     "win": {
       "icon": "public/icon-256.ico"
