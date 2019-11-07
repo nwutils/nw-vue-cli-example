@@ -37,7 +37,8 @@
     "test": "npm run test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "jest --config jest.config.js --coverage --runInBand",
-    "validate": "npm run lint && npm run test:unit && npm run build:vue"
+    "validate": "npm run lint && npm run test:unit && npm run build:vue",
+    "update:vue-devtools": "rimraf ./node_modules/nw-vue-devtools && npm install"
   },
   "dependencies": {
     "express": "^4.17.1"
