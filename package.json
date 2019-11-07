@@ -1,4 +1,10 @@
 {
+  "ManifestComments": [
+    "Only add dependencies that you want shipped to the end user, for everything else, use devDependencies, including things that will be bundled by webpack.",
+    "NW.js requires a name and a main, everything else is optional.",
+    "The build section is used by nwjs-builder-phoenix, see it's documentation for more info",
+    "To turn spell checking off, remove the chromium-args from this file"
+  ],
   "name": "nw-vue",
   "version": "1.1.0",
   "main": "http://localhost:8964",
