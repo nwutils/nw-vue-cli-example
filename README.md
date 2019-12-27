@@ -12,19 +12,21 @@ NW.js + Vue-CLI 4 example
 * Vue-DevTools (latest)
 * Babel
 * ESLint
+  * Vue Linting
+  * A11Y Linting
+  * Jest Linting
 * Jest (100% test coverage)
 
 *Why not include Vue-Router or Vuex?*
 
-Those are both very easily added from the Vue-CLI. There is also no custom styling libraries (Bulma, Bootstrap, etc), or meta-languages (Sass, TS, Pug, etc), or component libraries (Vuetify, Inkline, etc). This is repo is meant to be the "go to" option for building all desktop apps with Vue. So it avoids pushing any particular choices on to you. With the exception of testing being set up for Jest, and Linting being set up to ensure minumum quality of this boilerplate repo itself. Both of which can be easily modified, ignored, or removed.
+Those are both very easily added from the Vue-CLI. There is also no custom styling libraries (Bulma, Bootstrap, etc), or meta-languages (Sass, TS, Pug, etc), or component libraries (Vuetify, Inkline, etc). This repo is meant to be the "go to" option for building all desktop apps with Vue. So it avoids pushing any particular choices on to you. With the exception of testing being set up for Jest, and Linting being set up to ensure minumum quality of this boilerplate repo itself. Both of which can be easily modified, ignored, or removed.
 
 
 ## Running Locally for development
 
 1. `npm install`
 1. `npm start`
-1. An empty window will pop up while Webpack warm ups
-1. Once Webpack is running, refresh the window and you're golden
+1. Once Webpack finishes starting up your app will appear in a window
 
 
 ## Building for distribution
