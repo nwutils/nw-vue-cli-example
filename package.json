@@ -2,11 +2,11 @@
   "ManifestComments": [
     "Only add dependencies that you want shipped to the end user, for everything else, use devDependencies, including things that will be bundled by webpack.",
     "NW.js requires a name and a main, everything else is optional.",
-    "The build section is used by nwjs-builder-phoenix, see it's documentation for more info",
+    "The build section is used by nwjs-builder-phoenix, see its documentation for more info",
     "To turn spell checking off, remove it from the chromium-args in this file"
   ],
   "name": "nw-vue",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "main": "http://localhost:8964",
   "node-remote": "http://localhost:8964",
   "node-main": "",
@@ -27,10 +27,10 @@
     "build:nw": "build --concurrent --tasks win-x86,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ .",
     "build:win": "npm run build:win:clean && npm run build:vue && build --tasks win-x86 --mirror https://dl.nwjs.io/ .",
     "build:lin": "npm run build:lin:clean && npm run build:vue && build --tasks linux-x64 --mirror https://dl.nwjs.io/ .",
-    "build:win:clean": "rimraf ./dist-vue ./dist/nw-vue-1.2.0-win-x86 ./dist/nw-vue-1.2.0-win-x86.zip ./dist/nw-vue-1.2.0-win-x86.7z ./dist/nw-vue-1.2.0-win-x86-Setup.exe",
-    "build:lin:clean": "rimraf ./dist-vue ./dist/nw-vue-1.2.0-linux-x64 ./dist/nw-vue-1.2.0-linux-x64.zip",
-    "run:win": "dist\\nw-vue-1.2.0-win-x86\\nw-vue.exe",
-    "run:lin": "./dist/nw-vue-1.2.0-linux-x64/nw-vue",
+    "build:win:clean": "rimraf ./dist-vue ./dist/nw-vue-1.3.0-win-x86 ./dist/nw-vue-1.3.0-win-x86.zip ./dist/nw-vue-1.3.0-win-x86.7z ./dist/nw-vue-1.3.0-win-x86-Setup.exe",
+    "build:lin:clean": "rimraf ./dist-vue ./dist/nw-vue-1.3.0-linux-x64 ./dist/nw-vue-1.3.0-linux-x64.zip",
+    "run:win": "dist\\nw-vue-1.3.0-win-x86\\nw-vue.exe",
+    "run:lin": "./dist/nw-vue-1.3.0-linux-x64/nw-vue",
     "regression": "rd /s /q node_modules & rd /s /q node_modules & rd /s /q node_modules & npm install && npm run lint && npm test && npm run build:win && npm run run:win",
     "lint": "vue-cli-service lint --no-fix",
     "fix": "vue-cli-service lint --fix",
@@ -82,7 +82,7 @@
   },
   "chromium-args": "--enable-spell-checking --load-extension='./node_modules/nw-vue-devtools-prebuilt/extension'",
   "build": {
-    "nwVersion": "v0.42.3",
+    "nwVersion": "v0.43.2",
     "nwFlavor": "normal",
     "targets": [
       "zip",
@@ -104,6 +104,7 @@
       ".gitignore",
       ".editorconfig",
       "babel.config.js",
+      "CODE_OF_CONDUCT.md",
       "cypress.json",
       "jest.config.js",
       "nightwatch.conf.js",
@@ -115,6 +116,7 @@
       "vue.config.js"
     ],
     "strippedProperties": [
+      "ManifestComments",
       "scripts",
       "devDependencies",
       "build"
@@ -123,7 +125,14 @@
       "main": "http://localhost:8965",
       "node-remote": "http://localhost:8965",
       "node-main": "server.js",
-      "chromium-args": "--enable-spell-checking"
+      "chromium-args": "--enable-spell-checking",
+      "window": {
+        "width": 960,
+        "height": 600,
+        "min_width": 700,
+        "min_height": 500,
+        "icon": "dist-vue/vue.png"
+      }
     },
     "win": {
       "icon": "public/icon-256.ico"
