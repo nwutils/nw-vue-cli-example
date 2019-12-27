@@ -26,10 +26,10 @@ global.beforeEach(() => {
       NODE_ENV: 'development'
     },
     versions: {
-      chromium: '78.0.3904.97',
-      nw: '0.42.3',
+      chromium: '79.0.3945.88',
+      nw: '0.43.2',
       'nw-flavor': 'sdk',
-      node: '13.1.0'
+      node: '13.5.0'
     }
   };
   window.nw = {
