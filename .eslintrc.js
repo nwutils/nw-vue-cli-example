@@ -26,6 +26,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:jest/recommended',
+    'plugin:vue-a11y/recommended',
     'tjw-base',
     'tjw-vue'
   ],
@@ -33,6 +34,8 @@ module.exports = {
     'no-restricted-syntax': [
       'error',
       'Property[method="true"]'
-    ]
+    ],
+    // https://github.com/maranran/eslint-plugin-vue-a11y/issues/10
+    'vue-a11y/click-events-have-key-events': 'off'
   }
 };

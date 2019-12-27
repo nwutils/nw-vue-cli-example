@@ -65,6 +65,7 @@
     "eslint-config-tjw-vue": "^1.0.0",
     "eslint-plugin-jest": "^23.0.3",
     "eslint-plugin-vue": "^6.0.0",
+    "eslint-plugin-vue-a11y": "^0.0.31",
     "jest": "^24.9.0",
     "jest-environment-jsdom": "^24.9.0",
     "jest-environment-jsdom-global": "^1.2.0",
