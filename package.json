@@ -132,7 +132,7 @@
         "height": 600,
         "min_width": 700,
         "min_height": 500,
-        "icon": "dist-vue/vue.png"
+        "icon": "dist-vue/icon.png"
       }
     },
     "win": {
