@@ -88,5 +88,5 @@ This is not for those *using* this repo, but for those *maintaining* it.
    * `tests/unit/setup.js`
    * `tests/unit/components/__snapshots__/HelloWorld.test.js.snap`
    * `.browserslistrc`
-1. Bump the version number, and all the npm scripts reference the version number
+1. Bump the version number, and all the npm scripts that reference the version number
 1. Run `npm run regression` after updating dependencies or other major changes to verify builds still work correctly
