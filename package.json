@@ -6,7 +6,7 @@
     "To turn spell checking off, remove it from the chromium-args in this file"
   ],
   "name": "nw-vue",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "main": "http://localhost:8964",
   "node-remote": "http://localhost:8964",
   "node-main": "",
@@ -27,10 +27,10 @@
     "build:nw": "build --concurrent --tasks win-x86,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ .",
     "build:win": "npm run build:win:clean && npm run build:vue && build --tasks win-x86 --mirror https://dl.nwjs.io/ .",
     "build:lin": "npm run build:lin:clean && npm run build:vue && build --tasks linux-x64 --mirror https://dl.nwjs.io/ .",
-    "build:win:clean": "rimraf ./dist-vue ./dist/nw-vue-1.3.0-win-x86 ./dist/nw-vue-1.3.0-win-x86.zip ./dist/nw-vue-1.3.0-win-x86.7z ./dist/nw-vue-1.3.0-win-x86-Setup.exe",
-    "build:lin:clean": "rimraf ./dist-vue ./dist/nw-vue-1.3.0-linux-x64 ./dist/nw-vue-1.3.0-linux-x64.zip",
-    "run:win": "dist\\nw-vue-1.3.0-win-x86\\nw-vue.exe",
-    "run:lin": "./dist/nw-vue-1.3.0-linux-x64/nw-vue",
+    "build:win:clean": "rimraf ./dist-vue ./dist/nw-vue-1.4.0-win-x86 ./dist/nw-vue-1.4.0-win-x86.zip ./dist/nw-vue-1.4.0-win-x86.7z ./dist/nw-vue-1.4.0-win-x86-Setup.exe",
+    "build:lin:clean": "rimraf ./dist-vue ./dist/nw-vue-1.4.0-linux-x64 ./dist/nw-vue-1.4.0-linux-x64.zip",
+    "run:win": "dist\\nw-vue-1.4.0-win-x86\\nw-vue.exe",
+    "run:lin": "./dist/nw-vue-1.4.0-linux-x64/nw-vue",
     "regression": "rd /s /q node_modules & rd /s /q node_modules & rd /s /q node_modules & npm install && npm run lint && npm test && npm run build:win && npm run run:win",
     "lint": "vue-cli-service lint --no-fix",
     "fix": "vue-cli-service lint --fix",
@@ -44,11 +44,11 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.1.1",
-    "@vue/cli-plugin-e2e-nightwatch": "^4.1.1",
-    "@vue/cli-plugin-eslint": "^4.1.1",
-    "@vue/cli-plugin-unit-jest": "^4.1.1",
-    "@vue/cli-service": "^4.1.1",
+    "@vue/cli-plugin-babel": "^4.1.2",
+    "@vue/cli-plugin-e2e-nightwatch": "^4.1.2",
+    "@vue/cli-plugin-eslint": "^4.1.2",
+    "@vue/cli-plugin-unit-jest": "^4.1.2",
+    "@vue/cli-service": "^4.1.2",
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.3",
@@ -59,18 +59,19 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-preset-vue-app": "^2.0.0",
     "concurrently": "^5.0.2",
-    "core-js": "^3.6.1",
+    "core-js": "^3.6.4",
     "eslint": "^6.8.0",
     "eslint-config-tjw-base": "^1.0.0",
     "eslint-config-tjw-vue": "^1.0.0",
-    "eslint-plugin-jest": "^23.1.1",
-    "eslint-plugin-vue": "^6.0.2",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-vue": "^6.1.2",
     "eslint-plugin-vue-a11y": "^0.0.31",
     "jest": "^24.9.0",
     "jest-environment-jsdom": "^24.9.0",
     "jest-environment-jsdom-global": "^1.2.0",
+    "jest-serializer-vue-tjw": "^3.3.0",
     "jest-transform-stub": "^2.0.0",
-    "nw": "0.43.2-sdk",
+    "nw": "0.43.6-sdk",
     "nw-vue-devtools-prebuilt": "^0.0.10",
     "nwjs-builder-phoenix": "^1.15.0",
     "nwjs-types": "^1.0.0",
@@ -78,11 +79,11 @@
     "vue": "^2.6.11",
     "vue-jest": "^3.0.5",
     "vue-template-compiler": "^2.6.11",
-    "wait-on": "^3.3.0"
+    "wait-on": "^4.0.0"
   },
   "chromium-args": "--enable-spell-checking --load-extension='./node_modules/nw-vue-devtools-prebuilt/extension'",
   "build": {
-    "nwVersion": "v0.43.2",
+    "nwVersion": "v0.43.6",
     "nwFlavor": "normal",
     "targets": [
       "zip",
@@ -131,7 +132,7 @@
         "height": 600,
         "min_width": 700,
         "min_height": 500,
-        "icon": "dist-vue/vue.png"
+        "icon": "dist-vue/icon.png"
       }
     },
     "win": {
