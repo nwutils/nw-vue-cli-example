@@ -84,7 +84,9 @@ This will download the source code for the latest version of Vue-DevTools and do
 This is not for those *using* this repo, but for those *maintaining* it.
 
 1. When updating the version of NW.js devDependency, also update these:
+   * `package.json` devDeps, build nwVersion,
    * `tests/unit/setup.js`
    * `tests/unit/components/__snapshots__/HelloWorld.test.js.snap`
    * `.browserslistrc`
+1. Bump the version number, and all the npm scripts reference the version number
 1. Run `npm run regression` after updating dependencies or other major changes to verify builds still work correctly

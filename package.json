@@ -83,7 +83,7 @@
   },
   "chromium-args": "--enable-spell-checking --load-extension='./node_modules/nw-vue-devtools-prebuilt/extension'",
   "build": {
-    "nwVersion": "v0.43.2",
+    "nwVersion": "v0.43.6",
     "nwFlavor": "normal",
     "targets": [
       "zip",
