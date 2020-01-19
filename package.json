@@ -69,6 +69,7 @@
     "jest": "^24.9.0",
     "jest-environment-jsdom": "^24.9.0",
     "jest-environment-jsdom-global": "^1.2.0",
+    "jest-serializer-vue-tjw": "^3.3.0",
     "jest-transform-stub": "^2.0.0",
     "nw": "0.43.6-sdk",
     "nw-vue-devtools-prebuilt": "^0.0.10",

@@ -22,6 +22,7 @@ window.getComputedStyle = function getComputedStyleStub (el) {
 
 global.beforeEach(() => {
   window.process = {
+    cwd: process.cwd,
     env: {
       NODE_ENV: 'development'
     },
