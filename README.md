@@ -16,6 +16,7 @@ NW.js + Vue-CLI 4 example
   * A11Y Linting
   * Jest Linting
 * Jest (100% test coverage)
+* Jest Serializer Vue (TJW)
 
 *Why not include Vue-Router or Vuex?*
 
