@@ -15,7 +15,7 @@ describe('HelloWorld.vue', () => {
   test('Render default contents', () => {
     const wrapper = mount(HelloWorld);
 
-    expect(wrapper.html())
+    expect(wrapper)
       .toMatchSnapshot();
   });
 

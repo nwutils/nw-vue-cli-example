@@ -32,7 +32,7 @@ describe('LinkList.vue', () => {
       propsData: { links: [link] }
     });
 
-    expect(wrapper.html())
+    expect(wrapper)
       .toMatchSnapshot();
   });
 

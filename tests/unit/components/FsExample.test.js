@@ -5,7 +5,7 @@ describe('FsExample.vue', () => {
   test('Render default contents', () => {
     const wrapper = shallowMount(FsExample);
 
-    expect(wrapper.html())
+    expect(wrapper)
       .toMatchSnapshot();
   });
 
@@ -17,7 +17,7 @@ describe('FsExample.vue', () => {
     expect(window.nw.require)
       .toHaveBeenCalledWith('fs');
 
-    expect(wrapper.html())
+    expect(wrapper)
       .toMatchSnapshot();
   });
 
@@ -35,7 +35,7 @@ describe('FsExample.vue', () => {
     expect(window.nw.require)
       .toHaveBeenCalledWith('fs');
 
-    expect(wrapper.html())
+    expect(wrapper)
       .toMatchSnapshot();
   });
 });
