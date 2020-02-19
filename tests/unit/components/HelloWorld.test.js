@@ -19,19 +19,19 @@ describe('HelloWorld.vue', () => {
       .toMatchSnapshot();
   });
 
-  test('Activate dev tools', () => {
+  test('Activate dev tools', async () => {
     const wrapper = shallowMount(HelloWorld);
 
     const button = wrapper.find('[data-test="toggleDevTools"]');
 
     button.trigger('click');
-    wrapper.vm.$nextTick();
+    await wrapper.vm.$nextTick();
 
     expect(wrapper.find('[data-test="toggleDevTools').html())
       .toMatchSnapshot('hide');
 
     button.trigger('click');
-    wrapper.vm.$nextTick();
+    await wrapper.vm.$nextTick();
 
     expect(wrapper.find('[data-test="toggleDevTools').html())
       .toMatchSnapshot('show');

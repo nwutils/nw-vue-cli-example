@@ -9,10 +9,12 @@ describe('FsExample.vue', () => {
       .toMatchSnapshot();
   });
 
-  test('Click button', () => {
+  test('Click button', async () => {
     const wrapper = shallowMount(FsExample);
     let domButton = wrapper.find('[data-test="fs-example-button"]');
     domButton.trigger('click');
+
+    await wrapper.vm.$nextTick();
 
     expect(window.nw.require)
       .toHaveBeenCalledWith('fs');
@@ -21,7 +23,7 @@ describe('FsExample.vue', () => {
       .toMatchSnapshot();
   });
 
-  test('Error state', () => {
+  test('Error state', async () => {
     window.nw.require.mockImplementation((module) => {
       if (module === 'fs') {
         return new Error();
@@ -31,6 +33,8 @@ describe('FsExample.vue', () => {
     const wrapper = shallowMount(FsExample);
     let domButton = wrapper.find('[data-test="fs-example-button"]');
     domButton.trigger('click');
+
+    await wrapper.vm.$nextTick();
 
     expect(window.nw.require)
       .toHaveBeenCalledWith('fs');
