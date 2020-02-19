@@ -3,7 +3,8 @@
     "Only add dependencies that you want shipped to the end user, for everything else, use devDependencies, including things that will be bundled by webpack.",
     "NW.js requires a name and a main, everything else is optional.",
     "The build section is used by nwjs-builder-phoenix, see its documentation for more info",
-    "To turn spell checking off, remove it from the chromium-args in this file"
+    "To turn spell checking off, remove it from the chromium-args in this file",
+    "Pinned Jest to 24.9.0 because 25.1.0 is broken on Windows. See: facebook/jest #9459"
   ],
   "name": "nw-vue",
   "version": "1.4.0",
@@ -66,7 +67,7 @@
     "eslint-plugin-jest": "^23.6.0",
     "eslint-plugin-vue": "^6.1.2",
     "eslint-plugin-vue-a11y": "^0.0.31",
-    "jest": "^25.1.0",
+    "jest": "^24.9.0",
     "jest-environment-jsdom": "^25.1.0",
     "jest-environment-jsdom-global": "^1.2.0",
     "jest-serializer-vue-tjw": "^3.5.0",
