@@ -5,7 +5,7 @@ describe('App.vue', () => {
   test('Render default contents', () => {
     const wrapper = shallowMount(App);
 
-    expect(wrapper.html())
+    expect(wrapper)
       .toMatchSnapshot();
   });
 });
