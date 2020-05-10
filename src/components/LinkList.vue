@@ -44,7 +44,11 @@ export default {
   },
   methods: {
     open: function (url) {
-      window.nw.Shell.openExternal(url);
+      if (this.isDesktop) {
+        nw.Shell.openExternal(url);
+      } else {
+        window.open(url, '_blank');
+      }
     }
   }
 };

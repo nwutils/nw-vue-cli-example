@@ -3,7 +3,8 @@
     <h1 data-test="message">
       {{ msg }}
     </h1>
-    <h3 data-test="versions">
+
+    <h3 v-if="isDesktop" data-test="versions">
       You are using
       Vue.js (v{{ vueVersion }}),
       NW.js (v{{ versions.nw }}-{{ versions['nw-flavor'] }}),
@@ -11,9 +12,12 @@
       and
       Chromium (v{{ versions.chromium }}).
     </h3>
+    <h3 v-else data-test="versions">
+      You are using Vue.js (v{{ vueVersion }}).
+    </h3>
 
     <button
-      v-if="devMode"
+      v-if="devMode && isDesktop"
       data-test="toggleDevTools"
       @click="toggleDevTools"
     >
@@ -38,9 +42,11 @@
     <h3>Ecosystem</h3>
     <LinkList :links="ecosystemLinks" />
 
-    <hr />
+    <template v-if="isDesktop">
+      <hr />
 
-    <FsExample />
+      <FsExample />
+    </template>
   </div>
 </template>
 
@@ -154,19 +160,19 @@ export default {
   methods: {
     toggleDevTools: function () {
       if (this.showDevTools) {
-        window.nw.Window.get().showDevTools();
+        this.nw.Window.get().showDevTools();
       } else {
-        window.nw.Window.get().closeDevTools();
+        this.nw.Window.get().closeDevTools();
       }
       this.showDevTools = !this.showDevTools;
     }
   },
   computed: {
     devMode: function () {
-      return window.process.versions['nw-flavor'] === 'sdk';
+      return this.isDesktop && this.process.versions['nw-flavor'] === 'sdk';
     },
     versions: function () {
-      return window.process.versions;
+      return this.isDesktop && this.process.versions;
     },
     vueVersion: function () {
       return Vue.version;

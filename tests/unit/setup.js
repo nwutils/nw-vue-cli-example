@@ -1,5 +1,7 @@
 import Vue from 'vue';
 
+import applyPrototypes from '@/helpers/applyPrototypes.js';
+
 const { getComputedStyle } = window;
 
 Vue.config.productionTip = false;
@@ -20,20 +22,27 @@ window.getComputedStyle = function getComputedStyleStub (el) {
   };
 };
 
+window.webSetup = function () {
+  delete window.nw;
+  applyPrototypes(Vue);
+
+  window.open = jest.fn();
+};
+
 global.beforeEach(() => {
-  window.process = {
-    cwd: process.cwd,
-    env: {
-      NODE_ENV: 'development'
-    },
-    versions: {
-      chromium: '80.0.3987.116',
-      nw: '0.44.2',
-      'nw-flavor': 'sdk',
-      node: '13.8.0'
-    }
-  };
   window.nw = {
+    process: {
+      cwd: process.cwd,
+      env: {
+        NODE_ENV: 'development'
+      },
+      versions: {
+        chromium: '80.0.3987.116',
+        nw: '0.44.2',
+        'nw-flavor': 'sdk',
+        node: '13.8.0'
+      }
+    },
     require: jest.fn((module) => {
       if (module === 'fs') {
         return {
@@ -55,10 +64,14 @@ global.beforeEach(() => {
       }
     }
   };
+
+  applyPrototypes(Vue);
 });
 
 global.afterEach(() => {
-  window.nw.Window.get().showDevTools.mockClear();
+  if (window.nw) {
+    window.nw.Window.get().showDevTools.mockClear();
+  }
 });
 
 

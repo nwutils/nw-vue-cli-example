@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FsExample.vue Click button 1`] = `
+exports[`FsExample.vue Desktop Click button 1`] = `
 <div>
   <!---->
   <button>
@@ -20,7 +20,7 @@ exports[`FsExample.vue Click button 1`] = `
 </div>
 `;
 
-exports[`FsExample.vue Error state 1`] = `
+exports[`FsExample.vue Desktop Error state 1`] = `
 <div>
   <div>
     There was an error attempting to read from the file system.
@@ -32,7 +32,7 @@ exports[`FsExample.vue Error state 1`] = `
 </div>
 `;
 
-exports[`FsExample.vue Render default contents 1`] = `
+exports[`FsExample.vue Desktop Render default contents 1`] = `
 <div>
   <!---->
   <button>
@@ -41,3 +41,5 @@ exports[`FsExample.vue Render default contents 1`] = `
   <!---->
 </div>
 `;
+
+exports[`FsExample.vue Web Render default contents 1`] = ``;

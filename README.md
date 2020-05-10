@@ -6,6 +6,12 @@ NW.js + Vue-CLI 4 example
 
 ![A screenshot of the default app running on Windows](screenshot.png)
 
+*Does this work for web or just desktop?*
+
+This repo will build both for web and desktop and includes simple boolean logic so you can add Desktop unique features behind the `isDesktop` flag. These repo has 100% test coverage including tests for both web and desktop builds. You could even theoretically add NativeScript-vue into the mix and build for native mobile as well (though that is not set up in this repo).
+
+**Comes with:**
+
 * NW.js 0.44.2
   * Chrome 80
   * Node 13.8.0
@@ -23,6 +29,39 @@ NW.js + Vue-CLI 4 example
 *Why not include Vue-Router or Vuex?*
 
 Those are both very easily added from the Vue-CLI. There is also no custom styling libraries (Bulma, Bootstrap, etc), or meta-languages (Sass, TS, Pug, etc), or component libraries (Vuetify, Inkline, etc). This repo is meant to be the "go to" option for building all desktop apps with Vue. So it avoids pushing any particular choices on to you. With the exception of testing being set up for Jest, and Linting being set up to ensure minumum quality of this boilerplate repo itself. Both of which can be easily modified, ignored, or removed.
+
+
+## Documentation
+
+In all .vue components, you have access to `nw`, `global`, `process`, `require`, and the boolean `isDesktop`:
+
+```js
+methods: {
+  example: function () {
+    if (this.isDesktop) {
+      console.log('Your OS is ' + this.process.platform);
+      console.log('Your AppData location is ' + this.nw.App.dataPath);
+      // Sets a value on Node's global, meaning other windows have access to this data.
+      this.global.cow = 'moo'
+      // The contents of the current directory
+      console.log(this.require('fs').readdirSync('.'));
+    }
+  }
+}
+```
+
+Or even directly from the template (with some slight changes to work within the Vue context):
+```html
+<div v-if="isDesktop">
+  Your OS is {{ process.platform }}.
+  Your AppData location is {{ nw.App.dataPath }}.
+  <button @click="nw.global.cow = 'moo'">
+    Clicking this button sets a value on Node's global.
+    Meaning other windows have access to this data.
+  </button>
+  The contents of the current directory are {{ nw.require('fs').readdirSync('.') }}.
+</div>
+```
 
 
 ## Running Locally for development
