@@ -6,10 +6,10 @@ NW.js + Vue-CLI 4 example
 
 ![A screenshot of the default app running on Windows](screenshot.png)
 
-* NW.js 0.44.2
-  * Chrome 80
-  * Node 13.8.0
-* Vue-CLI 4.2.2
+* NW.js 0.47.0
+  * Chrome 84
+  * Node 14.5.0
+* Vue-CLI 4.4.6
 * Vue 2.6.11
 * Vue-DevTools (latest)
 * Babel
