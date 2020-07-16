@@ -60,7 +60,7 @@
     "eslint-plugin-vue": "^6.2.1",
     "eslint-plugin-vue-a11y": "^0.0.31",
     "jest-serializer-vue-tjw": "^3.11.0",
-    "nw": "0.44.2-sdk",
+    "nw": "0.47.0-sdk",
     "nw-vue-devtools-prebuilt": "^0.0.10",
     "nwjs-builder-phoenix": "^1.15.0",
     "nwjs-types": "^1.0.0",
@@ -71,7 +71,7 @@
   },
   "chromium-args": "--enable-spell-checking --load-extension='./node_modules/nw-vue-devtools-prebuilt/extension'",
   "build": {
-    "nwVersion": "v0.44.2",
+    "nwVersion": "v0.47.0",
     "nwFlavor": "normal",
     "targets": [
       "zip",
