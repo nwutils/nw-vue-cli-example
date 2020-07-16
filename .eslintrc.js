@@ -26,7 +26,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:jest/recommended',
-    'plugin:vue-a11y/recommended',
+    'plugin:vuejs-accessibility/recommended',
     'tjw-base',
     'tjw-vue'
   ],
@@ -35,7 +35,15 @@ module.exports = {
       'error',
       'Property[method="true"]'
     ],
-    // https://github.com/maranran/eslint-plugin-vue-a11y/issues/10
-    'vue-a11y/click-events-have-key-events': 'off'
+    'vuejs-accessibility/label-has-for': [
+      'error',
+      {
+        'components': ['Label'],
+        'required': {
+          'some': ['nesting', 'id']
+        },
+        'allowChildren': false
+      }
+    ]
   }
 };
