@@ -14,6 +14,8 @@ module.exports = {
     '**/tests/unit/**/*.test.js'
   ],
   testPathIgnorePatterns: [
-    '<rootDir>/tests/e2e'
+    '<rootDir>/tests/e2e',
+    '<rootDir>/dist',
+    '<rootDir>/dist-vue'
   ]
 };
