@@ -2,21 +2,21 @@
 
 [![Build Status](https://travis-ci.org/nwutils/nw-vue-cli-example.svg?branch=master)](https://travis-ci.org/nwutils/nw-vue-cli-example)
 
-NW.js + Vue-CLI 4 example
+NW.js + Vue 2.x + Vue-CLI 4 example
 
 ![A screenshot of the default app running on Windows](screenshot.png)
 
 *Does this work for web or just desktop?*
 
-This repo will build both for web and desktop and includes simple boolean logic so you can add Desktop unique features behind the `isDesktop` flag. These repo has 100% test coverage including tests for both web and desktop builds. You could even theoretically add NativeScript-vue into the mix and build for native mobile as well (though that is not set up in this repo).
+This repo will build both for web and desktop and includes simple boolean logic so you can add Desktop unique features behind the `isDesktop` flag. This repo has 100% test coverage including tests for both web and desktop builds. You could even theoretically add NativeScript-vue into the mix and build for native mobile as well (though that is not set up in this repo).
 
 **Comes with:**
 
-* NW.js 0.44.2
-  * Chrome 80
-  * Node 13.8.0
-* Vue-CLI 4.2.2
-* Vue 2.6.11
+* NW.js 0.48.2
+  * Chrome 85
+  * Node 14.10.1
+* Vue-CLI 4.5.6
+* Vue 2.6.12
 * Vue-DevTools (latest)
 * Babel
 * ESLint
