@@ -2,15 +2,15 @@
 
 [![Build Status](https://travis-ci.org/nwutils/nw-vue-cli-example.svg?branch=master)](https://travis-ci.org/nwutils/nw-vue-cli-example)
 
-NW.js + Vue-CLI 4 example
+NW.js + Vue 2.x + Vue-CLI 4 example
 
 ![A screenshot of the default app running on Windows](screenshot.png)
 
-* NW.js 0.47.0
-  * Chrome 84
-  * Node 14.5.0
-* Vue-CLI 4.4.6
-* Vue 2.6.11
+* NW.js 0.48.2
+  * Chrome 85
+  * Node 14.10.1
+* Vue-CLI 4.5.6
+* Vue 2.6.12
 * Vue-DevTools (latest)
 * Babel
 * ESLint
