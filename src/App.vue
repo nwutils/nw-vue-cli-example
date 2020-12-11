@@ -23,6 +23,19 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  methods: {
+    closeSplashAndShowApp: function () {
+      const port = 4443;
+      const net = window.nw.require('net');
+      const client = new net.Socket();
+      client.connect(port, 'localhost');
+      client.write('loaded');
+      window.nw.Window.get().show();
+    }
+  },
+  created: function () {
+    this.closeSplashAndShowApp();
   }
 };
 </script>

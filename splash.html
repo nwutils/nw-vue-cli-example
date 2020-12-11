@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Loading</title>
+    <script src="node_modules/nw-splasher/nw-splasher.js"></script>
+    <link rel="stylesheet" href="node_modules/nw-splasher/nw-splasher.css" />
+  </head>
+  <body>
+  <body class="drag-enable">
+    <div class="wrapper">
+      <div class="close drag-disable" onclick="nw.Window.get().close(true)">&times;</div>
+      <h1>[App Name] is loading</h1>
+      <div class="spinner"></div>
+      Smooth animation plays while the app window is locked up and hidden from view.
+    </div>
+    <script>
+      const windowOptions = {
+        width: 960,
+        height: 600,
+        min_width: 700,
+        min_height: 500,
+        icon: 'dist-vue/icon.png'
+      };
+
+      // Port must match what is in App.vue
+      const port = 4443;
+
+      nwSplasher.loadAppWindowInBackground(nw.App.manifest['node-remote'], windowOptions, port);
+    </script>
+  </body>
+</html>
