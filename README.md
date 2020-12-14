@@ -24,6 +24,7 @@ NW.js + Vue 2.x + Vue-CLI 4 example
 
 Those are both very easily added from the Vue-CLI. There is also no custom styling libraries (Bulma, Bootstrap, etc), or meta-languages (Sass, TS, Pug, etc), or component libraries (Vuetify, Inkline, etc). This repo is meant to be the "go to" option for building all desktop apps with Vue. So it avoids pushing any particular choices on to you. With the exception of testing being set up for Jest, and Linting being set up to ensure minumum quality of this boilerplate repo itself. Both of which can be easily modified, ignored, or removed.
 
+If you want to load the app with a splash screen, check the `nw-splasher` branch.
 
 ## Running Locally for development
 
