@@ -27,14 +27,9 @@ export default {
       validator: function (links) {
         let valid = true;
         links.forEach(function (link) {
-          if (
-            !link.name ||
-            !link.url ||
-            !link.name.length ||
-            !link.url.length ||
-            typeof(link.name) !== 'string' ||
-            typeof(link.url) !== 'string'
-          ) {
+          const hasName = link.name && typeof(link.name) === 'string';
+          const hasUrl = link.url && typeof(link.url) === 'string';
+          if (!hasName || !hasUrl) {
             valid = false;
           }
         });
@@ -44,7 +39,11 @@ export default {
   },
   methods: {
     open: function (url) {
-      window.nw.Shell.openExternal(url);
+      if (this.isDesktop) {
+        this.nw.Shell.openExternal(url);
+      } else {
+        window.open(url, '_blank');
+      }
     }
   }
 };

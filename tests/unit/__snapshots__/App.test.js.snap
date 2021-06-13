@@ -1,9 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App.vue Render default contents 1`] = `
+exports[`App.vue Desktop Render default contents 1`] = `
 <div id="app">
-  <img src="@/assets/logo.png" alt="Vue.js logo" title="Vue.js" class="logo">
-  <img src="@/assets/nw.png" alt="NW.js logo" title="NW.js" class="logo">
+  <img alt="Vue.js logo" class="logo" src="@/assets/logo.png" title="Vue.js">
+  <img alt="NW.js logo" class="logo" src="@/assets/nw.png" title="NW.js">
   <helloworld-stub msg="Welcome to your Vue.js Desktop App in NW.js!"></helloworld-stub>
+</div>
+`;
+
+exports[`App.vue Web Render default contents 1`] = `
+<div id="app">
+  <img alt="Vue.js logo" class="logo" src="@/assets/logo.png" title="Vue.js">
+  <!---->
+  <helloworld-stub msg="Welcome to your Vue.js Web App!"></helloworld-stub>
 </div>
 `;

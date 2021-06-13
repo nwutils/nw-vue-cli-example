@@ -7,12 +7,13 @@
       class="logo"
     />
     <img
+      v-if="isDesktop"
       src="@/assets/nw.png"
       alt="NW.js logo"
       title="NW.js"
       class="logo"
     />
-    <HelloWorld msg="Welcome to your Vue.js Desktop App in NW.js!" />
+    <HelloWorld :msg="message" />
   </div>
 </template>
 
@@ -23,6 +24,14 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  computed: {
+    message: function () {
+      if (this.isDesktop) {
+        return 'Welcome to your Vue.js Desktop App in NW.js!';
+      }
+      return 'Welcome to your Vue.js Web App!';
+    }
   }
 };
 </script>
