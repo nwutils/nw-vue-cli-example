@@ -2,13 +2,10 @@
 
 [![Build Status](https://travis-ci.org/nwutils/nw-vue-cli-example.svg?branch=master)](https://travis-ci.org/nwutils/nw-vue-cli-example)
 
-NW.js + Vue-CLI 4 example
+* 1.x releases use: Vue 2 + NW.js latest + Vue-CLI 4
+* 2.x releases use: Vue 3 + NW.js latest + Vue-CLI latest
 
 ![A screenshot of the default app running on Windows](screenshot.png)
-
-*Does this work for web or just desktop?*
-
-This repo will build both for web and desktop and includes a simple `this.isDesktop` flag so you can add Desktop specific features that won't show on the web. This repo has 100% test coverage including tests for both web and desktop builds. You could even theoretically add NativeScript-vue into the mix and build for native mobile as well (though that is not set up in this repo).
 
 **Comes with:**
 
@@ -26,10 +23,16 @@ This repo will build both for web and desktop and includes a simple `this.isDesk
 * Jest (100% test coverage)
 * Jest Serializer Vue (TJW)
 
+*Does this work for web or just desktop?*
+
+**Both**. This repo will build both for web and desktop and includes a simple `this.isDesktop` flag so you can add Desktop specific features that won't show on the web. This repo has 100% test coverage including tests for both web and desktop builds. You could even theoretically add NativeScript-Vue into the mix and build for native mobile as well (though that is not set up in this repo).
+
+
 *Why not include Vue-Router or Vuex?*
 
-Those are both very easily added from the Vue-CLI. There is also no custom styling libraries (Bulma, Bootstrap, etc), or meta-languages (Sass, TS, Pug, etc), or component libraries (Vuetify, Inkline, etc). This repo is meant to be the "go to" option for building all desktop apps with Vue. So it avoids pushing any particular choices on to you. With the exception of testing being set up for Jest, and Linting being set up to ensure minumum quality of this boilerplate repo itself. Both of which can be easily modified, ignored, or removed.
+Those are both very easily added from the Vue-CLI. There is also no custom styling libraries (Bulma, Bootstrap, etc), or meta-languages (Sass, TS, Pug, etc), or component libraries (Vuetify, Inkline, etc). This repo is meant to be the "go to" option for building **all** desktop apps using Vue. So it avoids pushing any particular choices on to you. With the exception of testing being set up for Jest, and Linting being set up to ensure minumum quality of this boilerplate repo itself. Both of which can be easily modified, ignored, or removed.
 
+If you want to load the app with a splash screen, check the `nw-splasher` branch.
 
 ## Documentation
 
