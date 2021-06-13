@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import Vue from 'vue';
+import { version } from 'vue';
 
 import FsExample from '@/components/FsExample.vue';
 import LinkList from '@/components/LinkList.vue';
@@ -184,7 +184,7 @@ export default {
       return this.isDesktop && this.process.versions;
     },
     vueVersion: function () {
-      return Vue.version;
+      return version;
     }
   }
 };

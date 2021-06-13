@@ -4,10 +4,8 @@ import applyPrototypes from '@/helpers/applyPrototypes.js';
 
 const { getComputedStyle } = window;
 
-Vue.config.productionTip = false;
-
 // Prevents console log message to install Vue DevTools
-Vue.config.devtools = false;
+// Vue.config.devtools = false;
 
 // Monkeypatch JSDOM missing transition styles + vue-test-utils not properly stubbing transitions
 // in globally included libs (VeeValidate in our case)
