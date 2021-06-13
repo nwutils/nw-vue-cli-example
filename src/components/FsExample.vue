@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="isDesktop">
     <div v-if="error">
       There was an error attempting to read from the file system.
     </div>
@@ -44,16 +44,17 @@ export default {
   },
   methods: {
     getCurrentDirectory: function () {
-      const fs = window.nw.require('fs');
-      try {
-        this.contents = fs.readdirSync('.');
-        this.error = false;
-      } catch (err) {
-        this.error = true;
+      if (this.isDesktop) {
+        const fs = this.nw.require('fs');
+        try {
+          this.contents = fs.readdirSync('.');
+          this.error = false;
+        } catch (err) {
+          this.error = true;
+        }
       }
     }
-  },
-  computed: {}
+  }
 };
 </script>
 
