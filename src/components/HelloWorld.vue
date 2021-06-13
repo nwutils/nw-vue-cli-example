@@ -16,6 +16,15 @@
       You are using Vue.js (v{{ vueVersion }}).
     </h3>
 
+    <div v-if="isDesktop">
+      <LinkList
+        :links="[{
+          name: 'Open this app in a browser to see the page rendered differently.',
+          url: 'http://localhost:8964'
+        }]"
+      />
+    </div>
+
     <button
       v-if="devMode && isDesktop"
       data-test="toggleDevTools"

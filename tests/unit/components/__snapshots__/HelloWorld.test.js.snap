@@ -29,6 +29,15 @@ exports[`HelloWorld.vue Desktop Render default contents 1`] = `
     and
     Chromium (v80.0.3987.116).
   </h3>
+  <div>
+    <ul>
+      <li title="http://localhost:8964">
+        <a href="#">
+          Open this app in a browser to see the page rendered differently.
+        </a>
+      </li>
+    </ul>
+  </div>
   <button>
     Show
 
@@ -160,6 +169,7 @@ exports[`HelloWorld.vue Web Render default contents 1`] = `
   <h3>
     You are using Vue.js (v2.6.11).
   </h3>
+  <!---->
   <!---->
   <p>You can use the resources below to find more information around building your Vue App.</p>
   <ul>

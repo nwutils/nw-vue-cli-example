@@ -8,7 +8,7 @@ NW.js + Vue-CLI 4 example
 
 *Does this work for web or just desktop?*
 
-This repo will build both for web and desktop and includes simple boolean logic so you can add Desktop unique features behind the `isDesktop` flag. These repo has 100% test coverage including tests for both web and desktop builds. You could even theoretically add NativeScript-vue into the mix and build for native mobile as well (though that is not set up in this repo).
+This repo will build both for web and desktop and includes a simple `this.isDesktop` flag so you can add Desktop specific features that won't show on the web. This repo has 100% test coverage including tests for both web and desktop builds. You could even theoretically add NativeScript-vue into the mix and build for native mobile as well (though that is not set up in this repo).
 
 **Comes with:**
 
