@@ -24,26 +24,25 @@ window.getComputedStyle = function getComputedStyleStub (el) {
 
 window.webSetup = function () {
   delete window.nw;
-  delete window.process;
   applyPrototypes(Vue);
 
   window.open = jest.fn();
 };
 
 global.beforeEach(() => {
-  window.process = {
-    cwd: process.cwd,
-    env: {
-      NODE_ENV: 'development'
-    },
-    versions: {
-      chromium: '91.0.4472.77',
-      nw: '0.54.0',
-      'nw-flavor': 'sdk',
-      node: '16.1.0'
-    }
-  };
   window.nw = {
+    process: {
+      cwd: process.cwd,
+      env: {
+        NODE_ENV: 'development'
+      },
+      versions: {
+        chromium: '91.0.4472.77',
+        nw: '0.54.0',
+        'nw-flavor': 'sdk',
+        node: '16.1.0'
+      }
+    },
     require: jest.fn((module) => {
       if (module === 'fs') {
         return {
