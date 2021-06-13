@@ -14,6 +14,8 @@ if (process.platform === 'darwin') {
 nwBinary = './node_modules/nw/' + nwBinary;
 driver = './node_modules/nw/' + driver;
 
+console.log(nwBinary);
+
 module.exports = (function (settings) {
   settings.webdriver.server_path = driver;
   settings.selenium.cli_args['webdriver.chrome.driver'] = driver;

@@ -12,11 +12,11 @@ This repo will build both for web and desktop and includes a simple `this.isDesk
 
 **Comes with:**
 
-* NW.js 0.44.2
-  * Chrome 80
-  * Node 13.8.0
-* Vue-CLI 4.2.2
-* Vue 2.6.11
+* NW.js 0.54.0
+  * Chrome 91
+  * Node 16.1.0
+* Vue-CLI 4.5.13
+* Vue 2.6.14
 * Vue-DevTools (latest)
 * Babel
 * ESLint
