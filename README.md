@@ -23,6 +23,7 @@
 * Jest (100% test coverage)
 * Jest Serializer Vue (TJW)
 
+
 *Does this work for web or just desktop?*
 
 **Both**. This repo will build both for web and desktop and includes a simple `this.isDesktop` flag so you can add Desktop specific features that won't show on the web. This repo has 100% test coverage including tests for both web and desktop builds. You could even theoretically add NativeScript-Vue into the mix and build for native mobile as well (though that is not set up in this repo).
