@@ -1,39 +1,76 @@
 import { shallowMount, mount } from '@vue/test-utils';
+
 import HelloWorld from '@/components/HelloWorld.vue';
 
 describe('HelloWorld.vue', () => {
-  test('Render props.msg', () => {
-    const msg = 'new message';
-    const wrapper = shallowMount(HelloWorld, {
-      propsData: { msg }
+  const shared = {
+    msg: 'new message',
+    renderPropsMsg: function () {
+      const wrapper = shallowMount(HelloWorld, {
+        propsData: {
+          msg: this.msg
+        }
+      });
+
+      return wrapper;
+    },
+    renderDefaultContents: function () {
+      const wrapper = mount(HelloWorld);
+      return wrapper;
+    }
+  };
+
+  describe('Desktop', () => {
+    test('Render props.msg', () => {
+      const wrapper = shared.renderPropsMsg();
+
+      expect(wrapper.find('[data-test="message"]').text())
+        .toEqual(shared.msg);
     });
 
-    expect(wrapper.find('[data-test="message"]').text())
-      .toEqual(msg);
+    test('Render default contents', () => {
+      const wrapper = shared.renderDefaultContents();
+
+      expect(wrapper)
+        .toMatchSnapshot();
+    });
+
+    test('Activate dev tools', async () => {
+      const wrapper = shallowMount(HelloWorld);
+
+      const button = wrapper.find('[data-test="toggleDevTools"]');
+
+      button.trigger('click');
+      await wrapper.vm.$nextTick();
+
+      expect(wrapper.find('[data-test="toggleDevTools').html())
+        .toMatchSnapshot('hide');
+
+      button.trigger('click');
+      await wrapper.vm.$nextTick();
+
+      expect(wrapper.find('[data-test="toggleDevTools').html())
+        .toMatchSnapshot('show');
+    });
   });
 
-  test('Render default contents', () => {
-    const wrapper = mount(HelloWorld);
+  describe('Web', () => {
+    beforeEach(() => {
+      window.webSetup();
+    });
 
-    expect(wrapper)
-      .toMatchSnapshot();
-  });
+    test('Render props.msg', () => {
+      const wrapper = shared.renderPropsMsg();
 
-  test('Activate dev tools', async () => {
-    const wrapper = shallowMount(HelloWorld);
+      expect(wrapper.find('[data-test="message"]').text())
+        .toEqual(shared.msg);
+    });
 
-    const button = wrapper.find('[data-test="toggleDevTools"]');
+    test('Render default contents', () => {
+      const wrapper = shared.renderDefaultContents();
 
-    button.trigger('click');
-    await wrapper.vm.$nextTick();
-
-    expect(wrapper.find('[data-test="toggleDevTools').html())
-      .toMatchSnapshot('hide');
-
-    button.trigger('click');
-    await wrapper.vm.$nextTick();
-
-    expect(wrapper.find('[data-test="toggleDevTools').html())
-      .toMatchSnapshot('show');
+      expect(wrapper)
+        .toMatchSnapshot();
+    });
   });
 });

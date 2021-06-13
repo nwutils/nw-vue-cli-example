@@ -2,15 +2,18 @@
 
 [![Build Status](https://travis-ci.org/nwutils/nw-vue-cli-example.svg?branch=master)](https://travis-ci.org/nwutils/nw-vue-cli-example)
 
-NW.js + Vue 2.x + Vue-CLI 4 example
+* 1.x releases use: Vue 2 + NW.js latest + Vue-CLI 4
+* 2.x releases use: Vue 3 + NW.js latest + Vue-CLI latest
 
 ![A screenshot of the default app running on Windows](screenshot.png)
 
-* NW.js 0.48.2
-  * Chrome 85
-  * Node 14.10.1
-* Vue-CLI 4.5.6
-* Vue 2.6.12
+**Comes with:**
+
+* NW.js 0.54.0
+  * Chrome 91
+  * Node 16.1.0
+* Vue-CLI 4.5.13
+* Vue 2.6.14
 * Vue-DevTools (latest)
 * Babel
 * ESLint
@@ -20,11 +23,50 @@ NW.js + Vue 2.x + Vue-CLI 4 example
 * Jest (100% test coverage)
 * Jest Serializer Vue (TJW)
 
+
+*Does this work for web or just desktop?*
+
+**Both**. This repo will build both for web and desktop and includes a simple `this.isDesktop` flag so you can add Desktop specific features that won't show on the web. This repo has 100% test coverage including tests for both web and desktop builds. You could even theoretically add NativeScript-Vue into the mix and build for native mobile as well (though that is not set up in this repo).
+
+
 *Why not include Vue-Router or Vuex?*
 
-Those are both very easily added from the Vue-CLI. There is also no custom styling libraries (Bulma, Bootstrap, etc), or meta-languages (Sass, TS, Pug, etc), or component libraries (Vuetify, Inkline, etc). This repo is meant to be the "go to" option for building all desktop apps with Vue. So it avoids pushing any particular choices on to you. With the exception of testing being set up for Jest, and Linting being set up to ensure minumum quality of this boilerplate repo itself. Both of which can be easily modified, ignored, or removed.
+Those are both very easily added from the Vue-CLI. There is also no custom styling libraries (Bulma, Bootstrap, etc), or meta-languages (Sass, TS, Pug, etc), or component libraries (Vuetify, Inkline, etc). This repo is meant to be the "go to" option for building **all** desktop apps using Vue. So it avoids pushing any particular choices on to you. With the exception of testing being set up for Jest, and Linting being set up to ensure minumum quality of this boilerplate repo itself. Both of which can be easily modified, ignored, or removed.
 
 If you want to load the app with a splash screen, check the `nw-splasher` branch.
+
+## Documentation
+
+In all .vue components, you have access to `nw`, `global`, `process`, `require`, and the boolean `isDesktop`:
+
+```js
+methods: {
+  example: function () {
+    if (this.isDesktop) {
+      console.log('Your OS is ' + this.process.platform);
+      console.log('Your AppData location is ' + this.nw.App.dataPath);
+      // Sets a value on Node's global, meaning other windows have access to this data.
+      this.global.cow = 'moo';
+      // The contents of the current directory
+      console.log(this.require('fs').readdirSync('.'));
+    }
+  }
+}
+```
+
+Or even directly from the template (with some slight changes to work within the Vue context):
+```html
+<div v-if="isDesktop">
+  Your OS is {{ process.platform }}.
+  Your AppData location is {{ nw.App.dataPath }}.
+  <button @click="nw.global.cow = 'moo'">
+    Clicking this button sets a value on Node's global.
+    Meaning other windows have access to this data.
+  </button>
+  The contents of the current directory are {{ nw.require('fs').readdirSync('.') }}.
+</div>
+```
+
 
 ## Running Locally for development
 
