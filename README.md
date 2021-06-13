@@ -46,7 +46,7 @@ methods: {
       console.log('Your OS is ' + this.process.platform);
       console.log('Your AppData location is ' + this.nw.App.dataPath);
       // Sets a value on Node's global, meaning other windows have access to this data.
-      this.global.cow = 'moo'
+      this.global.cow = 'moo';
       // The contents of the current directory
       console.log(this.require('fs').readdirSync('.'));
     }

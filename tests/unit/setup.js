@@ -24,6 +24,7 @@ window.getComputedStyle = function getComputedStyleStub (el) {
 
 window.webSetup = function () {
   delete window.nw;
+  delete window.process;
   applyPrototypes(Vue);
 
   window.open = jest.fn();

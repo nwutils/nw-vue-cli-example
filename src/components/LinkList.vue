@@ -40,7 +40,7 @@ export default {
   methods: {
     open: function (url) {
       if (this.isDesktop) {
-        nw.Shell.openExternal(url);
+        this.nw.Shell.openExternal(url);
       } else {
         window.open(url, '_blank');
       }
