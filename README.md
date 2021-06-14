@@ -3,7 +3,15 @@
 [![Build Status](https://travis-ci.org/nwutils/nw-vue-cli-example.svg?branch=master)](https://travis-ci.org/nwutils/nw-vue-cli-example)
 
 * 1.x releases use: Vue 2 + NW.js latest + Vue-CLI 4
-* 2.x releases use: Vue 3 + NW.js latest + Vue-CLI latest
+* 2.x releases use: Vue 3 + NW.js latest + Vue-CLI 4
+
+## NOT YET VUE 3 COMPATIBLE
+
+It is recommended to use the 1.x version of this boilerplate until Vue 3 compatibility can be resolved for these:
+
+* Vue Test-Utils 2 - is in early alpha, missing many features
+* Jest (unit testing) - Waiting on VTU2
+* Jest-Serializer-Vue-TJW (snapshot testing) - Waiting on VTU2
 
 ![A screenshot of the default app running on Windows](screenshot.png)
 
@@ -14,14 +22,12 @@
   * Node 16.1.0
 * Vue-CLI 4.5.13
 * Vue 2.6.14
-* Vue-DevTools (latest)
+* Vue-DevTools-Beta (latest)
 * Babel
 * ESLint
   * Vue Linting
   * A11Y Linting
   * Jest Linting
-* Jest (100% test coverage)
-* Jest Serializer Vue (TJW)
 
 
 *Does this work for web or just desktop?*
@@ -91,7 +97,7 @@ They take a long time. If you do `npm run build` expect it to take 10-30 minutes
 ## Automated quality enforcment
 
 1. **Linting:** `npm run lint` - Uses rules in `./eslint.json`
-1. **Unit tests:** `npm run test:unit` - [Jest](https://jestjs.io).
+1. **Unit tests:** `npm run test:unit` - Waiting on Vue-Test-Utils 2 - [Jest](https://jestjs.io).
 1. **End-to-end:** `npm run test:e2e` - Accepting PR to make tests run in NW.js. - [Nightwatch](https://nightwatchjs.org).
 
 
@@ -105,12 +111,11 @@ Want Vue-Router? Vuex? Use the Vue-CLI to add them:
 * * *
 
 
-## Updating Vue-DevTools
+## Updating Vue-DevTools-Beta
 
-To update your version of Vue-DevTools run `npm run update:vue-devtools`.
+To update your version of Vue-DevTools-Beta run `npm run update:vue-devtools-beta`.
 
-This will download the source code for the latest version of Vue-DevTools and do a custom build for NW.js. This ensures you always have the latest version.
-
+This will download the source code for the latest version of Vue-DevTools-Beta and do a custom build for NW.js. This ensures you always have the latest version.
 
 * * *
 

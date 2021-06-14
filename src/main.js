@@ -6,4 +6,3 @@ import applyPrototypes from '@/helpers/applyPrototypes.js';
 const app = createApp(App);
 applyPrototypes(app.config.globalProperties);
 app.mount('#app');
-
