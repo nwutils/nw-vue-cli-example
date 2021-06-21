@@ -63,6 +63,7 @@
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-vue": "^7.11.1",
     "eslint-plugin-vuejs-accessibility": "^0.5.1",
+    "jest": "26.x.x",
     "jest-serializer-vue-tjw": "^3.18.0",
     "nw": "0.54.0-sdk",
     "nw-vue-devtools-beta-prebuilt": "^1.0.0",
