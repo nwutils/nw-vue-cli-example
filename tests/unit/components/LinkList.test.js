@@ -1,4 +1,4 @@
-import { shallowMount } from '@vue/test-utils';
+import testHelpers from '@@/unit/test-helpers.js';
 
 import LinkList from '@/components/LinkList.vue';
 
@@ -10,19 +10,19 @@ describe('LinkList.vue', () => {
 
   const shared = {
     validateProps: function () {
-      const wrapper = shallowMount(LinkList);
+      const wrapper = testHelpers.shallowMount(LinkList);
       const links = wrapper.vm.$options.props.links;
       return links;
     },
     renderDefaultContents: function () {
-      const wrapper = shallowMount(LinkList, {
-        propsData: { links: [link] }
+      const wrapper = testHelpers.shallowMount(LinkList, {
+        props: { links: [link] }
       });
       return wrapper;
     },
     clickLink: function () {
-      const wrapper = shallowMount(LinkList, {
-        propsData: { links: [link] }
+      const wrapper = testHelpers.shallowMount(LinkList, {
+        props: { links: [link] }
       });
 
       let domLink = wrapper.findAll('[data-test="link"]').at(0);
@@ -32,7 +32,7 @@ describe('LinkList.vue', () => {
 
   describe('Desktop', () => {
     test('Validate props', () => {
-      const links = shared.validateProps(expect);
+      const links = shared.validateProps();
 
       expect(links.required)
         .toBeFalsy();
