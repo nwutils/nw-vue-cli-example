@@ -6,14 +6,14 @@ export default {
     options = options || {};
     const wrapper = shallowMount(component, options);
     console.log(0, { component });
-    applyPrototypes(wrapper)
+    applyPrototypes(wrapper);
     return wrapper;
   },
   mount: function (component, options) {
     options = options || {};
     const wrapper = mount(component, options);
     console.log(1, { component });
-    applyPrototypes(wrapper)
+    applyPrototypes(wrapper);
     return wrapper;
   }
-}
+};

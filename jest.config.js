@@ -29,7 +29,7 @@ module.exports = {
     '<rootDir>/dist-vue/*'
   ],
   transform: {
-    "^.+\\.vue$": "vue-jest",
-    "^.+\\js$": "babel-jest"
+    '^.+\\.vue$': 'vue-jest',
+    '^.+\\js$': 'babel-jest'
   }
 };
