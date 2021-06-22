@@ -7,7 +7,7 @@ describe('App.vue', () => {
     test('Render default contents', () => {
       const wrapper = testHelpers.shallowMount(App);
 
-      expect(wrapper)
+      expect(wrapper.html())
         .toMatchSnapshot();
     });
   });
@@ -20,7 +20,7 @@ describe('App.vue', () => {
     test('Render default contents', () => {
       const wrapper = testHelpers.shallowMount(App);
 
-      expect(wrapper)
+      expect(wrapper.html())
         .toMatchSnapshot();
     });
   });

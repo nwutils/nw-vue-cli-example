@@ -15,7 +15,7 @@ describe('HelloWorld.vue', () => {
       return wrapper;
     },
     renderDefaultContents: function () {
-      const wrapper = mount(HelloWorld);
+      const wrapper = testHelpers.mount(HelloWorld);
       return wrapper;
     }
   };
@@ -31,7 +31,7 @@ describe('HelloWorld.vue', () => {
     test('Render default contents', () => {
       const wrapper = shared.renderDefaultContents();
 
-      expect(wrapper)
+      expect(wrapper.html())
         .toMatchSnapshot();
     });
 
@@ -69,7 +69,7 @@ describe('HelloWorld.vue', () => {
     test('Render default contents', () => {
       const wrapper = shared.renderDefaultContents();
 
-      expect(wrapper)
+      expect(wrapper.html())
         .toMatchSnapshot();
     });
   });

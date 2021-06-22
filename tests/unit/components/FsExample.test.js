@@ -14,7 +14,7 @@ describe('FsExample.vue', () => {
     test('Render default contents', () => {
       const wrapper = shared.renderDefaultContents();
 
-      expect(wrapper)
+      expect(wrapper.html())
         .toMatchSnapshot();
     });
 
@@ -28,7 +28,7 @@ describe('FsExample.vue', () => {
       expect(window.nw.require)
         .toHaveBeenCalledWith('fs');
 
-      expect(wrapper)
+      expect(wrapper.html())
         .toMatchSnapshot();
     });
 
@@ -48,7 +48,7 @@ describe('FsExample.vue', () => {
       expect(window.nw.require)
         .toHaveBeenCalledWith('fs');
 
-      expect(wrapper)
+      expect(wrapper.html())
         .toMatchSnapshot();
     });
   });
@@ -61,7 +61,7 @@ describe('FsExample.vue', () => {
     test('Render default contents', () => {
       const wrapper = shared.renderDefaultContents();
 
-      expect(wrapper)
+      expect(wrapper.html())
         .toMatchSnapshot();
     });
 
