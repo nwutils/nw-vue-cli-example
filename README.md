@@ -5,14 +5,6 @@
 * 1.x releases use: Vue 2 + NW.js latest + Vue-CLI 4
 * 2.x releases use: Vue 3 + NW.js latest + Vue-CLI 4
 
-## NOT YET VUE 3 COMPATIBLE
-
-It is recommended to use the 1.x version of this boilerplate until Vue 3 compatibility can be resolved for these:
-
-* Vue Test-Utils 2 - is in early alpha, missing many features
-* Jest (unit testing) - Waiting on VTU2
-* Jest-Serializer-Vue-TJW (snapshot testing) - Waiting on VTU2
-
 ![A screenshot of the default app running on Windows](screenshot.png)
 
 **Comes with:**
@@ -28,6 +20,14 @@ It is recommended to use the 1.x version of this boilerplate until Vue 3 compati
   * Vue Linting
   * A11Y Linting
   * Jest Linting
+
+## Why is this in Alpha? When will this be ready?
+
+It is recommended to use the 1.x version of this boilerplate until Vue 3 compatibility can be resolved for these:
+
+* Unit testing (Jest) does not work:
+  * Vue Test-Utils 2 - Soon to be released
+    * Jest-Serializer-Vue-TJW (snapshot testing) - Waiting on VTU2
 
 
 *Does this work for web or just desktop?*
