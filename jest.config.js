@@ -18,7 +18,7 @@ module.exports = {
     '<rootDir>/tests/unit/setup.js'
   ],
   snapshotSerializers: [
-   '<rootDir>/node_modules/jest-serializer-vue-tjw'
+    '<rootDir>/tests/unit/serializer.js'
   ],
   testMatch: [
     '**/tests/unit/**/*.test.js'

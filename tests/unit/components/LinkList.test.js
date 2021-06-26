@@ -53,7 +53,7 @@ describe('LinkList.vue', () => {
     test('Render default contents', () => {
       const wrapper = shared.renderDefaultContents();
 
-      expect(wrapper.html())
+      expect(wrapper)
         .toMatchSnapshot();
     });
 
@@ -92,7 +92,7 @@ describe('LinkList.vue', () => {
     test('Render default contents', () => {
       const wrapper = shared.renderDefaultContents();
 
-      expect(wrapper.html())
+      expect(wrapper)
         .toMatchSnapshot();
     });
 
