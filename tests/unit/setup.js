@@ -22,8 +22,6 @@ window.getComputedStyle = function getComputedStyleStub (el) {
 
 window.webSetup = function () {
   delete window.nw;
-  applyPrototypes(Vue);
-
   window.open = jest.fn();
 };
 
@@ -62,8 +60,6 @@ global.beforeEach(() => {
       }
     }
   };
-
-  applyPrototypes(Vue);
 });
 
 global.afterEach(() => {

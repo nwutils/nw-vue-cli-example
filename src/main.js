@@ -4,5 +4,5 @@ import App from '@/App.vue';
 import applyPrototypes from '@/helpers/applyPrototypes.js';
 
 const app = createApp(App);
-applyPrototypes(app.config.globalProperties);
+applyPrototypes.toApp(app);
 app.mount('#app');

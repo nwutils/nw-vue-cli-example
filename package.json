@@ -41,6 +41,7 @@
     "test": "npm run test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "jest --config jest.config.js --coverage",
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --config jest.config.js --runInBand",
     "validate": "npm run lint && npm run test:unit && npm run build:vue",
     "update:vue-devtools-beta": "rimraf ./node_modules/nw-vue-devtools-beta-prebuilt && npm install"
   },
