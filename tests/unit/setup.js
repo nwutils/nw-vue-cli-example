@@ -1,7 +1,3 @@
-import Vue from 'vue';
-
-import applyPrototypes from '@/helpers/applyPrototypes.js';
-
 const { getComputedStyle } = window;
 
 // Prevents console log message to install Vue DevTools
