@@ -25,7 +25,7 @@ describe('LinkList.vue', () => {
         props: { links: [link] }
       });
 
-      let domLink = wrapper.findAll('[data-test="link"]').at(0);
+      let domLink = wrapper.findAll('[data-test="link"]')[0];
       domLink.trigger('click');
     }
   };

@@ -43,13 +43,13 @@ describe('HelloWorld.vue', () => {
       button.trigger('click');
       await wrapper.vm.$nextTick();
 
-      expect(wrapper.find('[data-test="toggleDevTools').html())
+      expect(wrapper.find('[data-test="toggleDevTools"]').html())
         .toMatchSnapshot('hide');
 
       button.trigger('click');
       await wrapper.vm.$nextTick();
 
-      expect(wrapper.find('[data-test="toggleDevTools').html())
+      expect(wrapper.find('[data-test="toggleDevTools"]').html())
         .toMatchSnapshot('show');
     });
   });
