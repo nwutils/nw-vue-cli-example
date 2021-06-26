@@ -32,7 +32,7 @@ describe('LinkList.vue', () => {
 
   describe('Desktop', () => {
     test('Validate props', () => {
-      const links = shared.validateProps(expect);
+      const links = shared.validateProps();
 
       expect(links.required)
         .toBeFalsy();
