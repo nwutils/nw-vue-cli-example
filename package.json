@@ -50,7 +50,7 @@
     "nw-electron-adapter": "^1.0.0"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-env": "^7.14.7",
     "@vue/cli-plugin-babel": "^4.5.13",
     "@vue/cli-plugin-e2e-nightwatch": "^4.5.13",
     "@vue/cli-plugin-eslint": "^4.5.13",
@@ -60,13 +60,13 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.x.x",
     "concurrently": "^6.2.0",
-    "core-js": "^3.14.0",
-    "eslint": "^7.28.0",
+    "core-js": "^3.15.1",
+    "eslint": "^7.29.0",
     "eslint-config-tjw-base": "^1.0.0",
     "eslint-config-tjw-vue": "^2.0.2",
     "eslint-plugin-jest": "^24.3.6",
-    "eslint-plugin-vue": "^7.11.1",
-    "eslint-plugin-vuejs-accessibility": "^0.5.1",
+    "eslint-plugin-vue": "^7.12.1",
+    "eslint-plugin-vuejs-accessibility": "^0.6.2",
     "jest": "26.x.x",
     "jest-serializer-vue-tjw": "^3.18.0",
     "nw": "0.54.0-sdk",
@@ -76,7 +76,7 @@
     "rimraf": "^3.0.2",
     "vue": "^3.0.0-beta.1",
     "vue-jest": "5.0.0-alpha.10",
-    "wait-on": "^5.3.0"
+    "wait-on": "^6.0.0"
   },
   "chromium-args": "--enable-spell-checking --load-extension='./node_modules/nw-vue-devtools-beta-prebuilt/extension'",
   "build": {
