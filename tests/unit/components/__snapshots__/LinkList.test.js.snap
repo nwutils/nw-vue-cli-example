@@ -3,9 +3,7 @@
 exports[`LinkList.vue Desktop Render default contents 1`] = `
 <ul>
   <li title="nwjs.io">
-    <a href="#">
-      Site
-    </a>
+    <a href="#">Site</a>
   </li>
 </ul>
 `;
@@ -13,9 +11,7 @@ exports[`LinkList.vue Desktop Render default contents 1`] = `
 exports[`LinkList.vue Web Render default contents 1`] = `
 <ul>
   <li title="nwjs.io">
-    <a href="#">
-      Site
-    </a>
+    <a href="#">Site</a>
   </li>
 </ul>
 `;

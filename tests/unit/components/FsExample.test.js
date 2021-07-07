@@ -1,11 +1,11 @@
-import { shallowMount } from '@vue/test-utils';
+import testHelpers from '@@/unit/test-helpers.js';
 
 import FsExample from '@/components/FsExample.vue';
 
 describe('FsExample.vue', () => {
   const shared = {
     renderDefaultContents: function () {
-      const wrapper = shallowMount(FsExample);
+      const wrapper = testHelpers.shallowMount(FsExample);
       return wrapper;
     }
   };
@@ -19,7 +19,7 @@ describe('FsExample.vue', () => {
     });
 
     test('Click button', async () => {
-      const wrapper = shallowMount(FsExample);
+      const wrapper = testHelpers.shallowMount(FsExample);
       let domButton = wrapper.find('[data-test="fs-example-button"]');
       domButton.trigger('click');
 
@@ -39,7 +39,7 @@ describe('FsExample.vue', () => {
         }
       });
 
-      const wrapper = shallowMount(FsExample);
+      const wrapper = testHelpers.shallowMount(FsExample);
       let domButton = wrapper.find('[data-test="fs-example-button"]');
       domButton.trigger('click');
 
@@ -66,7 +66,7 @@ describe('FsExample.vue', () => {
     });
 
     test('getCurrentDirectory', () => {
-      const wrapper = shallowMount(FsExample);
+      const wrapper = testHelpers.shallowMount(FsExample);
 
       wrapper.vm.getCurrentDirectory();
 
