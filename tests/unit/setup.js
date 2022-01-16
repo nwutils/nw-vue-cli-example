@@ -37,10 +37,10 @@ global.beforeEach(() => {
         NODE_ENV: 'development'
       },
       versions: {
-        chromium: '91.0.4472.77',
-        nw: '0.54.0',
+        chromium: '97.0.4692.71',
+        nw: '0.60.0',
         'nw-flavor': 'sdk',
-        node: '16.1.0'
+        node: '17.3.0'
       }
     },
     require: jest.fn((module) => {
