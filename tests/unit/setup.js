@@ -44,12 +44,27 @@ global.beforeEach(() => {
       }
     },
     require: jest.fn((module) => {
-      if (module === 'fs') {
-        return {
+      const modules = {
+        fs: {
           readdirSync: jest.fn(() => {
-            return ['example-file-1.ext', 'example-file-2.ext'];
+            return [
+              'example-file-1.ext',
+              'example-file-2.ext'
+            ];
           })
-        };
+        },
+        net: {
+          Socket: jest.fn(() => {
+            return {
+              connect: jest.fn(() => {}),
+              write: jest.fn(() => {})
+            };
+          })
+        }
+      };
+
+      if (modules[module]) {
+        return modules[module];
       }
     }),
     Shell: {
@@ -58,8 +73,9 @@ global.beforeEach(() => {
     Window: {
       get: function () {
         return {
+          closeDevTools: jest.fn(),
           showDevTools: jest.fn(),
-          closeDevTools: jest.fn()
+          show: jest.fn()
         };
       }
     }
