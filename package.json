@@ -41,7 +41,7 @@
     "update:vue-devtools": "rimraf ./node_modules/nw-vue-devtools-prebuilt && npm install"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.2",
     "nw-electron-adapter": "^1.0.0"
   },
   "devDependencies": {
@@ -57,10 +57,10 @@
     "eslint": "^7.32.0",
     "eslint-config-tjw-base": "^1.0.0",
     "eslint-config-tjw-vue": "^2.0.2",
-    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-jest": "^25.7.0",
     "eslint-plugin-vue": "^7.15.0",
     "eslint-plugin-vuejs-accessibility": "^0.7.1",
-    "jest-serializer-vue-tjw": "^3.18.0",
+    "jest-serializer-vue-tjw": "^3.19.0",
     "nw": "0.54.0-sdk",
     "nw-vue-devtools-prebuilt": "^0.0.10",
     "nwjs-builder-phoenix": "^1.15.0",
