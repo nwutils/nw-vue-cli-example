@@ -9,10 +9,10 @@
 
 **Comes with:**
 
-* NW.js 0.54.0
-  * Chrome 91
-  * Node 16.1.0
-* Vue-CLI 4.5.13
+* NW.js 0.60.0
+  * Chrome 97
+  * Node 17.3.0
+* Vue-CLI 4.5.15
 * Vue 2.6.14
 * Vue-DevTools (latest)
 * Babel
