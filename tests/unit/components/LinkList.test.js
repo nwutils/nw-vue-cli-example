@@ -38,7 +38,7 @@ describe('LinkList.vue', () => {
         .toBeFalsy();
 
       expect(links.type)
-        .toBe(Array);
+        .toEqual(Array);
 
       expect(links.default)
         .toBeNull();
@@ -77,7 +77,7 @@ describe('LinkList.vue', () => {
         .toBeFalsy();
 
       expect(links.type)
-        .toBe(Array);
+        .toEqual(Array);
 
       expect(links.default)
         .toBeNull();
