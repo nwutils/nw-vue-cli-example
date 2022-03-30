@@ -23,13 +23,12 @@
   * Import Linting
 
 
-## Why is this in Alpha? When will this be ready?
+## Why is this in Beta? When will this be ready?
 
-It is recommended to use the 1.x version of this boilerplate until Vue 3 compatibility can be resolved for these:
+* The `vue-3` branch is using an RC version of Vue-Test-Utils and still has an error that occurs when ran.
+* It also has a lint warning that should not occur, but does.
+* Other than this, it functions the same as the `vue-2` branch.
 
-* Unit testing (Jest) does not work:
-  * Vue Test-Utils 2 - Soon to be released
-    * Jest-Serializer-Vue-TJW (snapshot testing) - Waiting on VTU2
 
 *Does this work for web or just desktop?*
 
