@@ -2,17 +2,17 @@
 
 [![Build Status](https://travis-ci.org/nwutils/nw-vue-cli-example.svg?branch=master)](https://travis-ci.org/nwutils/nw-vue-cli-example)
 
-* 1.x releases use: Vue 2 + NW.js latest + Vue-CLI 4
+* 1.x releases use: Vue 2 + NW.js latest + Vue-CLI 5
 * 2.x releases use: Vue 3 + NW.js latest + Vue-CLI latest
 
 ![A screenshot of the default app running on Windows](screenshot.png)
 
 **Comes with:**
 
-* NW.js 0.60.0
-  * Chrome 97
-  * Node 17.3.0
-* Vue-CLI 4.5.15
+* NW.js 0.62.2
+  * Chrome 99
+  * Node 17.7.2
+* Vue-CLI 5.0.4
 * Vue 2.6.14
 * Vue-DevTools (latest)
 * Babel
@@ -20,6 +20,7 @@
   * Vue Linting
   * A11Y Linting
   * Jest Linting
+  * Import Linting
 * Jest (100% test coverage)
 * Jest Serializer Vue (TJW)
 
@@ -34,6 +35,7 @@
 Those are both very easily added from the Vue-CLI. There is also no custom styling libraries (Bulma, Bootstrap, etc), or meta-languages (Sass, TS, Pug, etc), or component libraries (Vuetify, Inkline, etc). This repo is meant to be the "go to" option for building **all** desktop apps using Vue. So it avoids pushing any particular choices on to you. With the exception of testing being set up for Jest, and Linting being set up to ensure minumum quality of this boilerplate repo itself. Both of which can be easily modified, ignored, or removed.
 
 If you want to load the app with a splash screen, check the `nw-splasher` branch.
+
 
 ## Documentation
 
