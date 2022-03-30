@@ -1,8 +1,13 @@
+const path = require('path');
+
+const baseRestrictedSyntax = require('eslint-config-tjw-base/no-restricted-syntax.json');
+const jestRestrictedSyntax = require('eslint-config-tjw-jest/no-restricted-syntax.json');
+
 module.exports = {
   root: true,
   parserOptions: {
-    parser: 'babel-eslint',
-    ecmaVersion: 8,
+    parser: '@babel/eslint-parser',
+    ecmaVersion: 2022,
     sourceType: 'module'
   },
   env: {
@@ -28,22 +33,40 @@ module.exports = {
     'plugin:jest/recommended',
     'plugin:vuejs-accessibility/recommended',
     'tjw-base',
-    'tjw-vue'
+    'tjw-vue',
+    'tjw-import',
+    'tjw-jest'
   ],
   rules: {
+    'import/no-extraneous-dependencies': 'off',
     'no-restricted-syntax': [
       'error',
-      'Property[method="true"]'
+      ...baseRestrictedSyntax,
+      ...jestRestrictedSyntax
     ],
     'vuejs-accessibility/label-has-for': [
       'error',
       {
-        'components': ['Label'],
-        'required': {
-          'some': ['nesting', 'id']
+        components: ['Label'],
+        required: {
+          some: ['nesting', 'id']
         },
-        'allowChildren': false
+        allowChildren: false
       }
     ]
+  },
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: {
+          resolve: {
+            alias: {
+              '@': path.resolve('src'),
+              '@@': path.resolve('tests')
+            }
+          }
+        }
+      }
+    }
   }
 };

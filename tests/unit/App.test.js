@@ -1,11 +1,11 @@
-import { shallowMount } from '@vue/test-utils';
-
 import App from '@/App.vue';
+
+import testHelpers from '@@/unit/test-helpers.js';
 
 describe('App.vue', () => {
   describe('Desktop', () => {
     test('Render default contents', () => {
-      const wrapper = shallowMount(App);
+      const wrapper = testHelpers.shallowMount(App);
 
       expect(wrapper)
         .toMatchSnapshot();
@@ -18,7 +18,7 @@ describe('App.vue', () => {
     });
 
     test('Render default contents', () => {
-      const wrapper = shallowMount(App);
+      const wrapper = testHelpers.shallowMount(App);
 
       expect(wrapper)
         .toMatchSnapshot();

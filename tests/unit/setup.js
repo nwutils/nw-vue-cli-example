@@ -1,7 +1,3 @@
-import Vue from 'vue';
-
-import applyPrototypes from '@/helpers/applyPrototypes.js';
-
 const { getComputedStyle } = window;
 
 // Prevents console log message to install Vue DevTools
@@ -22,8 +18,6 @@ window.getComputedStyle = function getComputedStyleStub (el) {
 
 window.webSetup = function () {
   delete window.nw;
-  applyPrototypes(Vue);
-
   window.open = jest.fn();
 };
 
@@ -35,10 +29,10 @@ global.beforeEach(() => {
         NODE_ENV: 'development'
       },
       versions: {
-        chromium: '91.0.4472.77',
-        nw: '0.54.0',
+        chromium: '99.0.4844.84',
+        nw: '0.62.2',
         'nw-flavor': 'sdk',
-        node: '16.1.0'
+        node: '17.7.2'
       }
     },
     require: jest.fn((module) => {
@@ -62,8 +56,6 @@ global.beforeEach(() => {
       }
     }
   };
-
-  applyPrototypes(Vue);
 });
 
 global.afterEach(() => {

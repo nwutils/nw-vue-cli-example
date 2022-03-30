@@ -1,13 +1,13 @@
-import { shallowMount, mount } from '@vue/test-utils';
-
 import HelloWorld from '@/components/HelloWorld.vue';
+
+import testHelpers from '@@/unit/test-helpers.js';
 
 describe('HelloWorld.vue', () => {
   const shared = {
     msg: 'new message',
     renderPropsMsg: function () {
-      const wrapper = shallowMount(HelloWorld, {
-        propsData: {
+      const wrapper = testHelpers.shallowMount(HelloWorld, {
+        props: {
           msg: this.msg
         }
       });
@@ -15,7 +15,7 @@ describe('HelloWorld.vue', () => {
       return wrapper;
     },
     renderDefaultContents: function () {
-      const wrapper = mount(HelloWorld);
+      const wrapper = testHelpers.mount(HelloWorld);
       return wrapper;
     }
   };
@@ -36,20 +36,20 @@ describe('HelloWorld.vue', () => {
     });
 
     test('Activate dev tools', async () => {
-      const wrapper = shallowMount(HelloWorld);
+      const wrapper = testHelpers.shallowMount(HelloWorld);
 
       const button = wrapper.find('[data-test="toggleDevTools"]');
 
       button.trigger('click');
       await wrapper.vm.$nextTick();
 
-      expect(wrapper.find('[data-test="toggleDevTools').html())
+      expect(wrapper.find('[data-test="toggleDevTools"]').html())
         .toMatchSnapshot('hide');
 
       button.trigger('click');
       await wrapper.vm.$nextTick();
 
-      expect(wrapper.find('[data-test="toggleDevTools').html())
+      expect(wrapper.find('[data-test="toggleDevTools"]').html())
         .toMatchSnapshot('show');
     });
   });

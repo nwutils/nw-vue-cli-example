@@ -20,7 +20,7 @@
       <LinkList
         :links="[{
           name: 'Open this app in a browser to see the page rendered differently.',
-          url: 'http://localhost:8964'
+          url: 'http://localhost:896' + (devMode ? '4' : '5')
         }]"
       />
     </div>
