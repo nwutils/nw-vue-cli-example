@@ -112,11 +112,10 @@ Want Vue-Router? Vuex? Use the Vue-CLI to add them:
 * * *
 
 
-## Updating Vue-DevTools-Beta
+## Updating Vue-DevTools
 
-To update your version of Vue-DevTools-Beta run `npm run update:vue-devtools-beta`.
+To update your version of Vue-DevTools run `npm run update:vue-devtools`.
 
-This will download the source code for the latest version of Vue-DevTools-Beta and do a custom build for NW.js. This ensures you always have the latest version.
 
 * * *
 
