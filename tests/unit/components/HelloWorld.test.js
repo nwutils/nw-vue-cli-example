@@ -1,6 +1,6 @@
-import testHelpers from '@@/unit/test-helpers.js';
-
 import HelloWorld from '@/components/HelloWorld.vue';
+
+import testHelpers from '@@/unit/test-helpers.js';
 
 describe('HelloWorld.vue', () => {
   const shared = {

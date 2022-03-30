@@ -1,4 +1,5 @@
 import { shallowMount, mount } from '@vue/test-utils';
+
 import applyPrototypes from '@/helpers/applyPrototypes.js';
 
 export default {

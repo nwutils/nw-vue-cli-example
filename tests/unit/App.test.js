@@ -1,6 +1,6 @@
-import testHelpers from '@@/unit/test-helpers.js';
-
 import App from '@/App.vue';
+
+import testHelpers from '@@/unit/test-helpers.js';
 
 describe('App.vue', () => {
   describe('Desktop', () => {

@@ -1,6 +1,6 @@
-import testHelpers from '@@/unit/test-helpers.js';
-
 import FsExample from '@/components/FsExample.vue';
+
+import testHelpers from '@@/unit/test-helpers.js';
 
 describe('FsExample.vue', () => {
   const shared = {

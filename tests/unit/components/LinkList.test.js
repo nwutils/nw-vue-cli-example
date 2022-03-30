@@ -1,6 +1,6 @@
-import testHelpers from '@@/unit/test-helpers.js';
-
 import LinkList from '@/components/LinkList.vue';
+
+import testHelpers from '@@/unit/test-helpers.js';
 
 describe('LinkList.vue', () => {
   const link = {
@@ -38,7 +38,7 @@ describe('LinkList.vue', () => {
         .toBeFalsy();
 
       expect(links.type)
-        .toBe(Array);
+        .toEqual(Array);
 
       expect(links.default)
         .toBeNull();
@@ -77,7 +77,7 @@ describe('LinkList.vue', () => {
         .toBeFalsy();
 
       expect(links.type)
-        .toBe(Array);
+        .toEqual(Array);
 
       expect(links.default)
         .toBeNull();
