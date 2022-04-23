@@ -2,7 +2,7 @@ process.env.VUE_CLI_BABEL_TARGET_NODE = true;
 process.env.VUE_CLI_BABEL_TRANSPILE_MODULES = true;
 
 module.exports = {
-  // preset: '@vue/cli-plugin-unit-jest',
+  preset: '@vue/cli-plugin-unit-jest',
   coverageDirectory: '<rootDir>/tests/unit/coverage',
   moduleFileExtensions: [
     'vue',
@@ -29,7 +29,7 @@ module.exports = {
     '<rootDir>/dist-vue/*'
   ],
   transform: {
-    '^.+\\.vue$': 'vue-jest',
+    '^.+\\.vue$': '@vue/vue3-jest',
     '^.+\\js$': 'babel-jest'
   }
 };
