@@ -57,9 +57,17 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
+      node: {
+        extensions: [
+          '.js',
+          '.json',
+          '.vue'
+        ]
+      },
       webpack: {
         config: {
           resolve: {
+            ...require.resolve('@vue/cli-service/webpack.config.js'),
             alias: {
               '@': path.resolve('src'),
               '@@': path.resolve('tests')
