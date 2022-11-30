@@ -1,5 +1,19 @@
 # nw-vue-cli-example
 
+
+* * *
+
+
+## This project is outdated, use the new repo:
+
+Vue-CLI is an abstraction for WebPack, but the Vue community is now only supporting Vite going forward. The new repo has all of the features this repo had, except with a slightly newer tech stack.
+
+* https://github.com/nwutils/nw-vue3-boilerplate
+
+
+* * *
+
+
 [![Build Status](https://travis-ci.org/nwutils/nw-vue-cli-example.svg?branch=master)](https://travis-ci.org/nwutils/nw-vue-cli-example)
 
 * 1.x releases use: Vue 2 + NW.js latest + Vue-CLI 5
